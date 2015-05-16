@@ -1,0 +1,1598 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MoonPdfLib.0.3.0.0.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:MoonPdfLib.Fakes.ShimMoonPdfPanel">
+            <summary>Shim type of MoonPdfLib.MoonPdfPanel</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.ShimMoonPdfPanel.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.ShimMoonPdfPanel.#ctor(MoonPdfLib.MoonPdfPanel)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.ShimMoonPdfPanel.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.ShimMoonPdfPanel.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.ShimMoonPdfPanel.Bind(System.Windows.IInputElement)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.ShimMoonPdfPanel.Bind(System.Windows.Markup.IAddChild)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.ShimMoonPdfPanel.Bind(System.Windows.Media.Animation.IAnimatable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.ShimMoonPdfPanel.Bind(System.Windows.IFrameworkInputElement)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.ShimMoonPdfPanel.Bind(System.ComponentModel.ISupportInitialize)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.ShimMoonPdfPanel.Bind(System.Windows.Markup.IComponentConnector)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.ShimMoonPdfPanel.Bind(System.Windows.Markup.IQueryAmbient)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.ApplyChangedViewTypeViewType">
+            <summary>Sets the shim of MoonPdfPanel.ApplyChangedViewType(ViewType oldViewType)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.ChangeDisplayTypePageRowDisplayType">
+            <summary>Sets the shim of MoonPdfPanel.ChangeDisplayType(PageRowDisplayType pageRowDisplayType)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.Constructor">
+            <summary>Sets the shim of MoonPdfPanel.MoonPdfPanel()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.CurrentPasswordGet">
+            <summary>Sets the shim of MoonPdfPanel.get_CurrentPassword()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.CurrentPasswordSetString">
+            <summary>Sets the shim of MoonPdfPanel.set_CurrentPassword(String value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.CurrentSourceGet">
+            <summary>Sets the shim of MoonPdfPanel.get_CurrentSource()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.CurrentSourceSetIPdfSource">
+            <summary>Sets the shim of MoonPdfPanel.set_CurrentSource(IPdfSource value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.CurrentZoomGet">
+            <summary>Sets the shim of MoonPdfPanel.get_CurrentZoom()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.GetCurrentPageNumber">
+            <summary>Sets the shim of MoonPdfPanel.GetCurrentPageNumber()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.GetPagesPerRow">
+            <summary>Sets the shim of MoonPdfPanel.GetPagesPerRow()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.GotoFirstPage">
+            <summary>Sets the shim of MoonPdfPanel.GotoFirstPage()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.GotoLastPage">
+            <summary>Sets the shim of MoonPdfPanel.GotoLastPage()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.GotoNextPage">
+            <summary>Sets the shim of MoonPdfPanel.GotoNextPage()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.GotoPageInt32">
+            <summary>Sets the shim of MoonPdfPanel.GotoPage(Int32 pageNumber)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.GotoPreviousPage">
+            <summary>Sets the shim of MoonPdfPanel.GotoPreviousPage()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.HorizontalMarginGet">
+            <summary>Sets the shim of MoonPdfPanel.get_HorizontalMargin()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.InitializeComponent">
+            <summary>Sets the shim of MoonPdfPanel.InitializeComponent()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.LoadPdfIPdfSourceString">
+            <summary>Sets the shim of MoonPdfPanel.LoadPdf(IPdfSource source, String password)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.MaxZoomFactorGet">
+            <summary>Sets the shim of MoonPdfPanel.get_MaxZoomFactor()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.MaxZoomFactorSetDouble">
+            <summary>Sets the shim of MoonPdfPanel.set_MaxZoomFactor(Double value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.MinZoomFactorGet">
+            <summary>Sets the shim of MoonPdfPanel.get_MinZoomFactor()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.MinZoomFactorSetDouble">
+            <summary>Sets the shim of MoonPdfPanel.set_MinZoomFactor(Double value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.OnDropDragEventArgs">
+            <summary>Sets the shim of MoonPdfPanel.OnDrop(DragEventArgs e)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.OnPropertyChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the shim of MoonPdfPanel.OnPropertyChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.OpenFileStringString">
+            <summary>Sets the shim of MoonPdfPanel.OpenFile(String pdfFilename, String password)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.OpenIPdfSourceString">
+            <summary>Sets the shim of MoonPdfPanel.Open(IPdfSource source, String password)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.PageMarginGet">
+            <summary>Sets the shim of MoonPdfPanel.get_PageMargin()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.PageMarginSetThickness">
+            <summary>Sets the shim of MoonPdfPanel.set_PageMargin(Thickness value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.PageRowDisplayChangedAddEventHandler">
+            <summary>Sets the shim of MoonPdfPanel.add_PageRowDisplayChanged(EventHandler value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.PageRowDisplayChangedRemoveEventHandler">
+            <summary>Sets the shim of MoonPdfPanel.remove_PageRowDisplayChanged(EventHandler value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.PageRowDisplayGet">
+            <summary>Sets the shim of MoonPdfPanel.get_PageRowDisplay()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.PageRowDisplaySetPageRowDisplayType">
+            <summary>Sets the shim of MoonPdfPanel.set_PageRowDisplay(PageRowDisplayType value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.PasswordRequiredAddEventHandlerOfPasswordRequiredEventArgs">
+            <summary>Sets the shim of MoonPdfPanel.add_PasswordRequired(EventHandler`1&lt;PasswordRequiredEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.PasswordRequiredRemoveEventHandlerOfPasswordRequiredEventArgs">
+            <summary>Sets the shim of MoonPdfPanel.remove_PasswordRequired(EventHandler`1&lt;PasswordRequiredEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.PdfLoadedAddEventHandler">
+            <summary>Sets the shim of MoonPdfPanel.add_PdfLoaded(EventHandler value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.PdfLoadedRemoveEventHandler">
+            <summary>Sets the shim of MoonPdfPanel.remove_PdfLoaded(EventHandler value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.PdfViewerPanel_SizeChangedObjectSizeChangedEventArgs">
+            <summary>Sets the shim of MoonPdfPanel.PdfViewerPanel_SizeChanged(Object sender, SizeChangedEventArgs e)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.RotateImageRotation">
+            <summary>Sets the shim of MoonPdfPanel.Rotate(ImageRotation rotation)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.RotateLeft">
+            <summary>Sets the shim of MoonPdfPanel.RotateLeft()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.RotateRight">
+            <summary>Sets the shim of MoonPdfPanel.RotateRight()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.RotationGet">
+            <summary>Sets the shim of MoonPdfPanel.get_Rotation()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.RotationSetImageRotation">
+            <summary>Sets the shim of MoonPdfPanel.set_Rotation(ImageRotation value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.ScrollViewerGet">
+            <summary>Sets the shim of MoonPdfPanel.get_ScrollViewer()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.SetFixedZoom">
+            <summary>Sets the shim of MoonPdfPanel.SetFixedZoom()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.StaticConstructor">
+            <summary>Sets the shim of MoonPdfPanel.MoonPdfPanel()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.SystemWindowsMarkupIComponentConnectorConnectInt32Object">
+            <summary>Sets the shim of MoonPdfPanel.System.Windows.Markup.IComponentConnector.Connect(Int32 connectionId, Object target)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.TogglePageDisplay">
+            <summary>Sets the shim of MoonPdfPanel.TogglePageDisplay()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.TotalPagesGet">
+            <summary>Sets the shim of MoonPdfPanel.get_TotalPages()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.TotalPagesSetInt32">
+            <summary>Sets the shim of MoonPdfPanel.set_TotalPages(Int32 value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.UpdateAndReloadActionViewType">
+            <summary>Sets the shim of MoonPdfPanel.UpdateAndReload(Action updateAction, ViewType viewType)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.ViewTypeChangedAddEventHandler">
+            <summary>Sets the shim of MoonPdfPanel.add_ViewTypeChanged(EventHandler value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.ViewTypeChangedRemoveEventHandler">
+            <summary>Sets the shim of MoonPdfPanel.remove_ViewTypeChanged(EventHandler value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.ViewTypeGet">
+            <summary>Sets the shim of MoonPdfPanel.get_ViewType()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.ViewTypeSetViewType">
+            <summary>Sets the shim of MoonPdfPanel.set_ViewType(ViewType value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.ZoomDouble">
+            <summary>Sets the shim of MoonPdfPanel.Zoom(Double zoomFactor)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.ZoomIn">
+            <summary>Sets the shim of MoonPdfPanel.ZoomIn()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.ZoomOut">
+            <summary>Sets the shim of MoonPdfPanel.ZoomOut()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.ZoomStepGet">
+            <summary>Sets the shim of MoonPdfPanel.get_ZoomStep()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.ZoomStepSetDouble">
+            <summary>Sets the shim of MoonPdfPanel.set_ZoomStep(Double value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.ZoomToHeight">
+            <summary>Sets the shim of MoonPdfPanel.ZoomToHeight()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.ZoomToWidth">
+            <summary>Sets the shim of MoonPdfPanel.ZoomToWidth()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.ZoomTypeChangedAddEventHandler">
+            <summary>Sets the shim of MoonPdfPanel.add_ZoomTypeChanged(EventHandler value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.ZoomTypeChangedRemoveEventHandler">
+            <summary>Sets the shim of MoonPdfPanel.remove_ZoomTypeChanged(EventHandler value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.ZoomTypeGet">
+            <summary>Sets the shim of MoonPdfPanel.get_ZoomType()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.ZoomTypeSetZoomType">
+            <summary>Sets the shim of MoonPdfPanel.set_ZoomType(ZoomType value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel._ApplyChangedViewTypeb__8">
+            <summary>Sets the shim of MoonPdfPanel.&lt;ApplyChangedViewType&gt;b__8()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel._CalculatePageRowBoundsb__1Size">
+            <summary>Sets the shim of MoonPdfPanel.&lt;CalculatePageRowBounds&gt;b__1(Size f)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel._CalculatePageRowBoundsb__2Size">
+            <summary>Sets the shim of MoonPdfPanel.&lt;CalculatePageRowBounds&gt;b__2(Size f)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.resizeTimer_TickObjectEventArgs">
+            <summary>Sets the shim of MoonPdfPanel.resizeTimer_Tick(Object sender, EventArgs e)</summary>
+        </member>
+        <member name="T:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.ApplyChangedViewTypeViewType">
+            <summary>Sets the shim of MoonPdfPanel.ApplyChangedViewType(ViewType oldViewType)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.ChangeDisplayTypePageRowDisplayType">
+            <summary>Sets the shim of MoonPdfPanel.ChangeDisplayType(PageRowDisplayType pageRowDisplayType)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.CurrentPasswordGet">
+            <summary>Sets the shim of MoonPdfPanel.get_CurrentPassword()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.CurrentPasswordSetString">
+            <summary>Sets the shim of MoonPdfPanel.set_CurrentPassword(String value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.CurrentSourceGet">
+            <summary>Sets the shim of MoonPdfPanel.get_CurrentSource()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.CurrentSourceSetIPdfSource">
+            <summary>Sets the shim of MoonPdfPanel.set_CurrentSource(IPdfSource value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.CurrentZoomGet">
+            <summary>Sets the shim of MoonPdfPanel.get_CurrentZoom()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.GetCurrentPageNumber">
+            <summary>Sets the shim of MoonPdfPanel.GetCurrentPageNumber()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.GetPagesPerRow">
+            <summary>Sets the shim of MoonPdfPanel.GetPagesPerRow()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.GotoFirstPage">
+            <summary>Sets the shim of MoonPdfPanel.GotoFirstPage()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.GotoLastPage">
+            <summary>Sets the shim of MoonPdfPanel.GotoLastPage()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.GotoNextPage">
+            <summary>Sets the shim of MoonPdfPanel.GotoNextPage()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.GotoPageInt32">
+            <summary>Sets the shim of MoonPdfPanel.GotoPage(Int32 pageNumber)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.GotoPreviousPage">
+            <summary>Sets the shim of MoonPdfPanel.GotoPreviousPage()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.HorizontalMarginGet">
+            <summary>Sets the shim of MoonPdfPanel.get_HorizontalMargin()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.InitializeComponent">
+            <summary>Sets the shim of MoonPdfPanel.InitializeComponent()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.LoadPdfIPdfSourceString">
+            <summary>Sets the shim of MoonPdfPanel.LoadPdf(IPdfSource source, String password)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.MaxZoomFactorGet">
+            <summary>Sets the shim of MoonPdfPanel.get_MaxZoomFactor()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.MaxZoomFactorSetDouble">
+            <summary>Sets the shim of MoonPdfPanel.set_MaxZoomFactor(Double value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.MinZoomFactorGet">
+            <summary>Sets the shim of MoonPdfPanel.get_MinZoomFactor()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.MinZoomFactorSetDouble">
+            <summary>Sets the shim of MoonPdfPanel.set_MinZoomFactor(Double value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.OnDropDragEventArgs">
+            <summary>Sets the shim of MoonPdfPanel.OnDrop(DragEventArgs e)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.OnPropertyChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the shim of MoonPdfPanel.OnPropertyChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.OpenFileStringString">
+            <summary>Sets the shim of MoonPdfPanel.OpenFile(String pdfFilename, String password)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.OpenIPdfSourceString">
+            <summary>Sets the shim of MoonPdfPanel.Open(IPdfSource source, String password)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.PageMarginGet">
+            <summary>Sets the shim of MoonPdfPanel.get_PageMargin()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.PageMarginSetThickness">
+            <summary>Sets the shim of MoonPdfPanel.set_PageMargin(Thickness value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.PageRowDisplayChangedAddEventHandler">
+            <summary>Sets the shim of MoonPdfPanel.add_PageRowDisplayChanged(EventHandler value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.PageRowDisplayChangedRemoveEventHandler">
+            <summary>Sets the shim of MoonPdfPanel.remove_PageRowDisplayChanged(EventHandler value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.PageRowDisplayGet">
+            <summary>Sets the shim of MoonPdfPanel.get_PageRowDisplay()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.PageRowDisplaySetPageRowDisplayType">
+            <summary>Sets the shim of MoonPdfPanel.set_PageRowDisplay(PageRowDisplayType value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.PasswordRequiredAddEventHandlerOfPasswordRequiredEventArgs">
+            <summary>Sets the shim of MoonPdfPanel.add_PasswordRequired(EventHandler`1&lt;PasswordRequiredEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.PasswordRequiredRemoveEventHandlerOfPasswordRequiredEventArgs">
+            <summary>Sets the shim of MoonPdfPanel.remove_PasswordRequired(EventHandler`1&lt;PasswordRequiredEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.PdfLoadedAddEventHandler">
+            <summary>Sets the shim of MoonPdfPanel.add_PdfLoaded(EventHandler value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.PdfLoadedRemoveEventHandler">
+            <summary>Sets the shim of MoonPdfPanel.remove_PdfLoaded(EventHandler value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.PdfViewerPanel_SizeChangedObjectSizeChangedEventArgs">
+            <summary>Sets the shim of MoonPdfPanel.PdfViewerPanel_SizeChanged(Object sender, SizeChangedEventArgs e)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.RotateImageRotation">
+            <summary>Sets the shim of MoonPdfPanel.Rotate(ImageRotation rotation)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.RotateLeft">
+            <summary>Sets the shim of MoonPdfPanel.RotateLeft()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.RotateRight">
+            <summary>Sets the shim of MoonPdfPanel.RotateRight()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.RotationGet">
+            <summary>Sets the shim of MoonPdfPanel.get_Rotation()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.RotationSetImageRotation">
+            <summary>Sets the shim of MoonPdfPanel.set_Rotation(ImageRotation value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.ScrollViewerGet">
+            <summary>Sets the shim of MoonPdfPanel.get_ScrollViewer()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.SetFixedZoom">
+            <summary>Sets the shim of MoonPdfPanel.SetFixedZoom()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.SystemWindowsMarkupIComponentConnectorConnectInt32Object">
+            <summary>Sets the shim of MoonPdfPanel.System.Windows.Markup.IComponentConnector.Connect(Int32 connectionId, Object target)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.TogglePageDisplay">
+            <summary>Sets the shim of MoonPdfPanel.TogglePageDisplay()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.TotalPagesGet">
+            <summary>Sets the shim of MoonPdfPanel.get_TotalPages()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.TotalPagesSetInt32">
+            <summary>Sets the shim of MoonPdfPanel.set_TotalPages(Int32 value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.UpdateAndReloadActionViewType">
+            <summary>Sets the shim of MoonPdfPanel.UpdateAndReload(Action updateAction, ViewType viewType)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.ViewTypeChangedAddEventHandler">
+            <summary>Sets the shim of MoonPdfPanel.add_ViewTypeChanged(EventHandler value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.ViewTypeChangedRemoveEventHandler">
+            <summary>Sets the shim of MoonPdfPanel.remove_ViewTypeChanged(EventHandler value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.ViewTypeGet">
+            <summary>Sets the shim of MoonPdfPanel.get_ViewType()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.ViewTypeSetViewType">
+            <summary>Sets the shim of MoonPdfPanel.set_ViewType(ViewType value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.ZoomDouble">
+            <summary>Sets the shim of MoonPdfPanel.Zoom(Double zoomFactor)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.ZoomIn">
+            <summary>Sets the shim of MoonPdfPanel.ZoomIn()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.ZoomOut">
+            <summary>Sets the shim of MoonPdfPanel.ZoomOut()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.ZoomStepGet">
+            <summary>Sets the shim of MoonPdfPanel.get_ZoomStep()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.ZoomStepSetDouble">
+            <summary>Sets the shim of MoonPdfPanel.set_ZoomStep(Double value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.ZoomToHeight">
+            <summary>Sets the shim of MoonPdfPanel.ZoomToHeight()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.ZoomToWidth">
+            <summary>Sets the shim of MoonPdfPanel.ZoomToWidth()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.ZoomTypeChangedAddEventHandler">
+            <summary>Sets the shim of MoonPdfPanel.add_ZoomTypeChanged(EventHandler value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.ZoomTypeChangedRemoveEventHandler">
+            <summary>Sets the shim of MoonPdfPanel.remove_ZoomTypeChanged(EventHandler value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.ZoomTypeGet">
+            <summary>Sets the shim of MoonPdfPanel.get_ZoomType()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.ZoomTypeSetZoomType">
+            <summary>Sets the shim of MoonPdfPanel.set_ZoomType(ZoomType value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimMoonPdfPanel.AllInstances.resizeTimer_TickObjectEventArgs">
+            <summary>Sets the shim of MoonPdfPanel.resizeTimer_Tick(Object sender, EventArgs e)</summary>
+        </member>
+        <member name="T:MoonPdfLib.Fakes.ShimPasswordRequiredEventArgs">
+            <summary>Shim type of MoonPdfLib.PasswordRequiredEventArgs</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.ShimPasswordRequiredEventArgs.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.ShimPasswordRequiredEventArgs.#ctor(MoonPdfLib.PasswordRequiredEventArgs)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.ShimPasswordRequiredEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.ShimPasswordRequiredEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimPasswordRequiredEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimPasswordRequiredEventArgs.CancelGet">
+            <summary>Sets the shim of PasswordRequiredEventArgs.get_Cancel()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimPasswordRequiredEventArgs.CancelSetBoolean">
+            <summary>Sets the shim of PasswordRequiredEventArgs.set_Cancel(Boolean value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimPasswordRequiredEventArgs.Constructor">
+            <summary>Sets the shim of PasswordRequiredEventArgs.PasswordRequiredEventArgs()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimPasswordRequiredEventArgs.PasswordGet">
+            <summary>Sets the shim of PasswordRequiredEventArgs.get_Password()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimPasswordRequiredEventArgs.PasswordSetString">
+            <summary>Sets the shim of PasswordRequiredEventArgs.set_Password(String value)</summary>
+        </member>
+        <member name="T:MoonPdfLib.Fakes.ShimPasswordRequiredEventArgs.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimPasswordRequiredEventArgs.AllInstances.CancelGet">
+            <summary>Sets the shim of PasswordRequiredEventArgs.get_Cancel()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimPasswordRequiredEventArgs.AllInstances.CancelSetBoolean">
+            <summary>Sets the shim of PasswordRequiredEventArgs.set_Cancel(Boolean value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimPasswordRequiredEventArgs.AllInstances.PasswordGet">
+            <summary>Sets the shim of PasswordRequiredEventArgs.get_Password()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.ShimPasswordRequiredEventArgs.AllInstances.PasswordSetString">
+            <summary>Sets the shim of PasswordRequiredEventArgs.set_Password(String value)</summary>
+        </member>
+        <member name="T:MoonPdfLib.Fakes.StubMoonPdfPanel">
+            <summary>Stub type of MoonPdfLib.MoonPdfPanel</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.AddChild(System.Object)">
+            <summary>Sets the stub of ContentControl.AddChild(Object value)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.AddChildObject">
+            <summary>Sets the stub of ContentControl.AddChild(Object value)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.AddText(System.String)">
+            <summary>Sets the stub of ContentControl.AddText(String text)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.AddTextString">
+            <summary>Sets the stub of ContentControl.AddText(String text)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.ArrangeOverride(System.Windows.Size)">
+            <summary>Sets the stub of Control.ArrangeOverride(Size arrangeBounds)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.ArrangeOverrideSize">
+            <summary>Sets the stub of Control.ArrangeOverride(Size arrangeBounds)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.BeginInit">
+            <summary>Sets the stub of FrameworkElement.BeginInit()</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.BeginInit01">
+            <summary>Sets the stub of FrameworkElement.BeginInit()</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.EndInit">
+            <summary>Sets the stub of FrameworkElement.EndInit()</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.EndInit01">
+            <summary>Sets the stub of FrameworkElement.EndInit()</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.GetLayoutClip(System.Windows.Size)">
+            <summary>Sets the stub of FrameworkElement.GetLayoutClip(Size layoutSlotSize)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.GetLayoutClipSize">
+            <summary>Sets the stub of FrameworkElement.GetLayoutClip(Size layoutSlotSize)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.GetUIParentCore">
+            <summary>Sets the stub of FrameworkElement.GetUIParentCore()</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.GetUIParentCore01">
+            <summary>Sets the stub of FrameworkElement.GetUIParentCore()</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.GetVisualChild(System.Int32)">
+            <summary>Sets the stub of FrameworkElement.GetVisualChild(Int32 index)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.GetVisualChildInt32">
+            <summary>Sets the stub of FrameworkElement.GetVisualChild(Int32 index)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.HandlesScrollingGet">
+            <summary>Sets the stub of Control.get_HandlesScrolling()</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.HasEffectiveKeyboardFocusGet">
+            <summary>Sets the stub of UIElement.get_HasEffectiveKeyboardFocus()</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.HitTestCore(System.Windows.Media.GeometryHitTestParameters)">
+            <summary>Sets the stub of UIElement.HitTestCore(GeometryHitTestParameters hitTestParameters)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.HitTestCore(System.Windows.Media.PointHitTestParameters)">
+            <summary>Sets the stub of UIElement.HitTestCore(PointHitTestParameters hitTestParameters)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.HitTestCoreGeometryHitTestParameters">
+            <summary>Sets the stub of UIElement.HitTestCore(GeometryHitTestParameters hitTestParameters)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.HitTestCorePointHitTestParameters">
+            <summary>Sets the stub of UIElement.HitTestCore(PointHitTestParameters hitTestParameters)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.InitializeStub">
+            <summary>Initializes a new instance of type StubMoonPdfPanel</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.IsEnabledCoreGet">
+            <summary>Sets the stub of UIElement.get_IsEnabledCore()</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.LogicalChildrenGet">
+            <summary>Sets the stub of ContentControl.get_LogicalChildren()</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.MeasureOverride(System.Windows.Size)">
+            <summary>Sets the stub of Control.MeasureOverride(Size constraint)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.MeasureOverrideSize">
+            <summary>Sets the stub of Control.MeasureOverride(Size constraint)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnAccessKey(System.Windows.Input.AccessKeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnAccessKey(AccessKeyEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnAccessKeyAccessKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnAccessKey(AccessKeyEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnApplyTemplate">
+            <summary>Sets the stub of FrameworkElement.OnApplyTemplate()</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnApplyTemplate01">
+            <summary>Sets the stub of FrameworkElement.OnApplyTemplate()</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnChildDesiredSizeChanged(System.Windows.UIElement)">
+            <summary>Sets the stub of UIElement.OnChildDesiredSizeChanged(UIElement child)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnChildDesiredSizeChangedUIElement">
+            <summary>Sets the stub of UIElement.OnChildDesiredSizeChanged(UIElement child)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnContentChanged(System.Object,System.Object)">
+            <summary>Sets the stub of ContentControl.OnContentChanged(Object oldContent, Object newContent)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnContentChangedObjectObject">
+            <summary>Sets the stub of ContentControl.OnContentChanged(Object oldContent, Object newContent)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnContentStringFormatChanged(System.String,System.String)">
+            <summary>Sets the stub of ContentControl.OnContentStringFormatChanged(String oldContentStringFormat, String newContentStringFormat)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnContentStringFormatChangedStringString">
+            <summary>Sets the stub of ContentControl.OnContentStringFormatChanged(String oldContentStringFormat, String newContentStringFormat)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnContentTemplateChanged(System.Windows.DataTemplate,System.Windows.DataTemplate)">
+            <summary>Sets the stub of ContentControl.OnContentTemplateChanged(DataTemplate oldContentTemplate, DataTemplate newContentTemplate)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnContentTemplateChangedDataTemplateDataTemplate">
+            <summary>Sets the stub of ContentControl.OnContentTemplateChanged(DataTemplate oldContentTemplate, DataTemplate newContentTemplate)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnContentTemplateSelectorChanged(System.Windows.Controls.DataTemplateSelector,System.Windows.Controls.DataTemplateSelector)">
+            <summary>Sets the stub of ContentControl.OnContentTemplateSelectorChanged(DataTemplateSelector oldContentTemplateSelector, DataTemplateSelector newContentTemplateSelector)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnContentTemplateSelectorChangedDataTemplateSelectorDataTemplateSelector">
+            <summary>Sets the stub of ContentControl.OnContentTemplateSelectorChanged(DataTemplateSelector oldContentTemplateSelector, DataTemplateSelector newContentTemplateSelector)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnContextMenuClosing(System.Windows.Controls.ContextMenuEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnContextMenuClosing(ContextMenuEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnContextMenuClosingContextMenuEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnContextMenuClosing(ContextMenuEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnContextMenuOpening(System.Windows.Controls.ContextMenuEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnContextMenuOpening(ContextMenuEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnContextMenuOpeningContextMenuEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnContextMenuOpening(ContextMenuEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnCreateAutomationPeer">
+            <summary>Sets the stub of UserControl.OnCreateAutomationPeer()</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnCreateAutomationPeer01">
+            <summary>Sets the stub of UserControl.OnCreateAutomationPeer()</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnDragEnter(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnDragEnter(DragEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnDragEnterDragEventArgs">
+            <summary>Sets the stub of UIElement.OnDragEnter(DragEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnDragLeave(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnDragLeave(DragEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnDragLeaveDragEventArgs">
+            <summary>Sets the stub of UIElement.OnDragLeave(DragEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnDragOver(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnDragOver(DragEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnDragOverDragEventArgs">
+            <summary>Sets the stub of UIElement.OnDragOver(DragEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnDrop(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of MoonPdfPanel.OnDrop(DragEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnDropDragEventArgs">
+            <summary>Sets the stub of MoonPdfPanel.OnDrop(DragEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnGiveFeedback(System.Windows.GiveFeedbackEventArgs)">
+            <summary>Sets the stub of UIElement.OnGiveFeedback(GiveFeedbackEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnGiveFeedbackGiveFeedbackEventArgs">
+            <summary>Sets the stub of UIElement.OnGiveFeedback(GiveFeedbackEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnGotFocus(System.Windows.RoutedEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnGotFocus(RoutedEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnGotFocusRoutedEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnGotFocus(RoutedEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnGotKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnGotKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnGotKeyboardFocusKeyboardFocusChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnGotKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnGotMouseCapture(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnGotMouseCapture(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnGotMouseCaptureMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnGotMouseCapture(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnGotStylusCapture(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnGotStylusCapture(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnGotStylusCaptureStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnGotStylusCapture(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnGotTouchCapture(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnGotTouchCapture(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnGotTouchCaptureTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnGotTouchCapture(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnInitialized(System.EventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnInitialized(EventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnInitializedEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnInitialized(EventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnIsKeyboardFocusWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsKeyboardFocusWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnIsKeyboardFocusWithinChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsKeyboardFocusWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnIsKeyboardFocusedChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsKeyboardFocusedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnIsKeyboardFocusedChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsKeyboardFocusedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnIsMouseCaptureWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsMouseCaptureWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnIsMouseCaptureWithinChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsMouseCaptureWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnIsMouseCapturedChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsMouseCapturedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnIsMouseCapturedChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsMouseCapturedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnIsMouseDirectlyOverChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsMouseDirectlyOverChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnIsMouseDirectlyOverChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsMouseDirectlyOverChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnIsStylusCaptureWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsStylusCaptureWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnIsStylusCaptureWithinChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsStylusCaptureWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnIsStylusCapturedChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsStylusCapturedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnIsStylusCapturedChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsStylusCapturedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnIsStylusDirectlyOverChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsStylusDirectlyOverChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnIsStylusDirectlyOverChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsStylusDirectlyOverChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnKeyDownKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnKeyUp(System.Windows.Input.KeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnKeyUpKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostFocus(RoutedEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnLostFocusRoutedEventArgs">
+            <summary>Sets the stub of UIElement.OnLostFocus(RoutedEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnLostKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnLostKeyboardFocusKeyboardFocusChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnLostKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnLostMouseCapture(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostMouseCapture(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnLostMouseCaptureMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnLostMouseCapture(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnLostStylusCapture(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostStylusCapture(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnLostStylusCaptureStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnLostStylusCapture(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnLostTouchCapture(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostTouchCapture(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnLostTouchCaptureTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnLostTouchCapture(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnManipulationBoundaryFeedback(System.Windows.Input.ManipulationBoundaryFeedbackEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationBoundaryFeedback(ManipulationBoundaryFeedbackEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnManipulationBoundaryFeedbackManipulationBoundaryFeedbackEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationBoundaryFeedback(ManipulationBoundaryFeedbackEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnManipulationCompleted(System.Windows.Input.ManipulationCompletedEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationCompleted(ManipulationCompletedEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnManipulationCompletedManipulationCompletedEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationCompleted(ManipulationCompletedEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnManipulationDelta(System.Windows.Input.ManipulationDeltaEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationDelta(ManipulationDeltaEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnManipulationDeltaManipulationDeltaEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationDelta(ManipulationDeltaEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnManipulationInertiaStarting(System.Windows.Input.ManipulationInertiaStartingEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationInertiaStarting(ManipulationInertiaStartingEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnManipulationInertiaStartingManipulationInertiaStartingEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationInertiaStarting(ManipulationInertiaStartingEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnManipulationStarted(System.Windows.Input.ManipulationStartedEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationStarted(ManipulationStartedEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnManipulationStartedManipulationStartedEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationStarted(ManipulationStartedEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnManipulationStarting(System.Windows.Input.ManipulationStartingEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationStarting(ManipulationStartingEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnManipulationStartingManipulationStartingEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationStarting(ManipulationStartingEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnMouseDoubleClick(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of Control.OnMouseDoubleClick(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnMouseDoubleClickMouseButtonEventArgs">
+            <summary>Sets the stub of Control.OnMouseDoubleClick(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnMouseDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnMouseDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseEnter(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnMouseEnterMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseEnter(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseLeave(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnMouseLeaveMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseLeave(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseLeftButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnMouseLeftButtonDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseLeftButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseLeftButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnMouseLeftButtonUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseLeftButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnMouseMove(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnMouseMoveMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseRightButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnMouseRightButtonDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseRightButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnMouseRightButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseRightButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnMouseRightButtonUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseRightButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnMouseUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnMouseUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnMouseWheel(System.Windows.Input.MouseWheelEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseWheel(MouseWheelEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnMouseWheelMouseWheelEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseWheel(MouseWheelEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewDragEnter(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewDragEnter(DragEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewDragEnterDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewDragEnter(DragEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewDragLeave(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewDragLeave(DragEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewDragLeaveDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewDragLeave(DragEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewDragOver(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewDragOver(DragEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewDragOverDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewDragOver(DragEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewDrop(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewDrop(DragEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewDropDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewDrop(DragEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewGiveFeedback(System.Windows.GiveFeedbackEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewGiveFeedback(GiveFeedbackEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewGiveFeedbackGiveFeedbackEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewGiveFeedback(GiveFeedbackEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewGotKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewGotKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewGotKeyboardFocusKeyboardFocusChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewGotKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewKeyDownKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewKeyUp(System.Windows.Input.KeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewKeyUpKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewLostKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewLostKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewLostKeyboardFocusKeyboardFocusChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewLostKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewMouseDoubleClick(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of Control.OnPreviewMouseDoubleClick(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewMouseDoubleClickMouseButtonEventArgs">
+            <summary>Sets the stub of Control.OnPreviewMouseDoubleClick(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewMouseDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewMouseDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseLeftButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewMouseLeftButtonDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseLeftButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseLeftButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewMouseLeftButtonUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseLeftButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewMouseMove(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewMouseMoveMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseRightButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewMouseRightButtonDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseRightButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewMouseRightButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseRightButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewMouseRightButtonUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseRightButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewMouseUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewMouseUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewMouseWheel(System.Windows.Input.MouseWheelEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseWheel(MouseWheelEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewMouseWheelMouseWheelEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseWheel(MouseWheelEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewQueryContinueDrag(System.Windows.QueryContinueDragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewQueryContinueDrag(QueryContinueDragEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewQueryContinueDragQueryContinueDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewQueryContinueDrag(QueryContinueDragEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewStylusButtonDown(System.Windows.Input.StylusButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusButtonDown(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewStylusButtonDownStylusButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusButtonDown(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewStylusButtonUp(System.Windows.Input.StylusButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusButtonUp(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewStylusButtonUpStylusButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusButtonUp(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewStylusDown(System.Windows.Input.StylusDownEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusDown(StylusDownEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewStylusDownStylusDownEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusDown(StylusDownEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewStylusInAirMove(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusInAirMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewStylusInAirMoveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusInAirMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewStylusInRange(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusInRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewStylusInRangeStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusInRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewStylusMove(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewStylusMoveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewStylusOutOfRange(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusOutOfRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewStylusOutOfRangeStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusOutOfRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewStylusSystemGesture(System.Windows.Input.StylusSystemGestureEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusSystemGesture(StylusSystemGestureEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewStylusSystemGestureStylusSystemGestureEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusSystemGesture(StylusSystemGestureEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewStylusUp(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusUp(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewStylusUpStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusUp(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewTextInput(System.Windows.Input.TextCompositionEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewTextInput(TextCompositionEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewTextInputTextCompositionEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewTextInput(TextCompositionEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewTouchDown(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewTouchDown(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewTouchDownTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewTouchDown(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewTouchMove(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewTouchMove(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewTouchMoveTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewTouchMove(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewTouchUp(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewTouchUp(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPreviewTouchUpTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewTouchUp(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of MoonPdfPanel.OnPropertyChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnPropertyChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of MoonPdfPanel.OnPropertyChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnQueryContinueDrag(System.Windows.QueryContinueDragEventArgs)">
+            <summary>Sets the stub of UIElement.OnQueryContinueDrag(QueryContinueDragEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnQueryContinueDragQueryContinueDragEventArgs">
+            <summary>Sets the stub of UIElement.OnQueryContinueDrag(QueryContinueDragEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnQueryCursor(System.Windows.Input.QueryCursorEventArgs)">
+            <summary>Sets the stub of UIElement.OnQueryCursor(QueryCursorEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnQueryCursorQueryCursorEventArgs">
+            <summary>Sets the stub of UIElement.OnQueryCursor(QueryCursorEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnRender(System.Windows.Media.DrawingContext)">
+            <summary>Sets the stub of UIElement.OnRender(DrawingContext drawingContext)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnRenderDrawingContext">
+            <summary>Sets the stub of UIElement.OnRender(DrawingContext drawingContext)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnRenderSizeChanged(System.Windows.SizeChangedInfo)">
+            <summary>Sets the stub of FrameworkElement.OnRenderSizeChanged(SizeChangedInfo sizeInfo)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnRenderSizeChangedSizeChangedInfo">
+            <summary>Sets the stub of FrameworkElement.OnRenderSizeChanged(SizeChangedInfo sizeInfo)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStyleChanged(System.Windows.Style,System.Windows.Style)">
+            <summary>Sets the stub of FrameworkElement.OnStyleChanged(Style oldStyle, Style newStyle)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStyleChangedStyleStyle">
+            <summary>Sets the stub of FrameworkElement.OnStyleChanged(Style oldStyle, Style newStyle)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStylusButtonDown(System.Windows.Input.StylusButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusButtonDown(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStylusButtonDownStylusButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusButtonDown(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStylusButtonUp(System.Windows.Input.StylusButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusButtonUp(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStylusButtonUpStylusButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusButtonUp(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStylusDown(System.Windows.Input.StylusDownEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusDown(StylusDownEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStylusDownStylusDownEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusDown(StylusDownEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStylusEnter(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusEnter(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStylusEnterStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusEnter(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStylusInAirMove(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusInAirMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStylusInAirMoveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusInAirMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStylusInRange(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusInRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStylusInRangeStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusInRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStylusLeave(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusLeave(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStylusLeaveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusLeave(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStylusMove(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStylusMoveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStylusOutOfRange(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusOutOfRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStylusOutOfRangeStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusOutOfRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStylusSystemGesture(System.Windows.Input.StylusSystemGestureEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusSystemGesture(StylusSystemGestureEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStylusSystemGestureStylusSystemGestureEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusSystemGesture(StylusSystemGestureEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStylusUp(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusUp(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnStylusUpStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusUp(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnTemplateChanged(System.Windows.Controls.ControlTemplate,System.Windows.Controls.ControlTemplate)">
+            <summary>Sets the stub of Control.OnTemplateChanged(ControlTemplate oldTemplate, ControlTemplate newTemplate)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnTemplateChangedControlTemplateControlTemplate">
+            <summary>Sets the stub of Control.OnTemplateChanged(ControlTemplate oldTemplate, ControlTemplate newTemplate)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnTextInput(System.Windows.Input.TextCompositionEventArgs)">
+            <summary>Sets the stub of UIElement.OnTextInput(TextCompositionEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnTextInputTextCompositionEventArgs">
+            <summary>Sets the stub of UIElement.OnTextInput(TextCompositionEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnToolTipClosing(System.Windows.Controls.ToolTipEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnToolTipClosing(ToolTipEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnToolTipClosingToolTipEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnToolTipClosing(ToolTipEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnToolTipOpening(System.Windows.Controls.ToolTipEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnToolTipOpening(ToolTipEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnToolTipOpeningToolTipEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnToolTipOpening(ToolTipEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnTouchDown(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchDown(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnTouchDownTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchDown(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnTouchEnter(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchEnter(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnTouchEnterTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchEnter(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnTouchLeave(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchLeave(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnTouchLeaveTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchLeave(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnTouchMove(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchMove(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnTouchMoveTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchMove(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnTouchUp(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchUp(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnTouchUpTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchUp(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnVisualChildrenChanged(System.Windows.DependencyObject,System.Windows.DependencyObject)">
+            <summary>Sets the stub of Visual.OnVisualChildrenChanged(DependencyObject visualAdded, DependencyObject visualRemoved)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnVisualChildrenChangedDependencyObjectDependencyObject">
+            <summary>Sets the stub of Visual.OnVisualChildrenChanged(DependencyObject visualAdded, DependencyObject visualRemoved)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.OnVisualParentChanged(System.Windows.DependencyObject)">
+            <summary>Sets the stub of FrameworkElement.OnVisualParentChanged(DependencyObject oldParent)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.OnVisualParentChangedDependencyObject">
+            <summary>Sets the stub of FrameworkElement.OnVisualParentChanged(DependencyObject oldParent)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.ParentLayoutInvalidated(System.Windows.UIElement)">
+            <summary>Sets the stub of FrameworkElement.ParentLayoutInvalidated(UIElement child)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.ParentLayoutInvalidatedUIElement">
+            <summary>Sets the stub of FrameworkElement.ParentLayoutInvalidated(UIElement child)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.ShouldSerializeContent">
+            <summary>Sets the stub of ContentControl.ShouldSerializeContent()</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.ShouldSerializeContent01">
+            <summary>Sets the stub of ContentControl.ShouldSerializeContent()</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.ShouldSerializeProperty(System.Windows.DependencyProperty)">
+            <summary>Sets the stub of DependencyObject.ShouldSerializeProperty(DependencyProperty dp)</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.ShouldSerializePropertyDependencyProperty">
+            <summary>Sets the stub of DependencyObject.ShouldSerializeProperty(DependencyProperty dp)</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubMoonPdfPanel.ToString">
+            <summary>Sets the stub of Control.ToString()</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.ToString01">
+            <summary>Sets the stub of Control.ToString()</summary>
+        </member>
+        <member name="F:MoonPdfLib.Fakes.StubMoonPdfPanel.VisualChildrenCountGet">
+            <summary>Sets the stub of FrameworkElement.get_VisualChildrenCount()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.StubMoonPdfPanel.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.StubMoonPdfPanel.HandlesScrolling">
+            <summary>Sets the stub of Control.get_HandlesScrolling()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.StubMoonPdfPanel.HasEffectiveKeyboardFocus">
+            <summary>Sets the stub of UIElement.get_HasEffectiveKeyboardFocus()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.StubMoonPdfPanel.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.StubMoonPdfPanel.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.StubMoonPdfPanel.IsEnabledCore">
+            <summary>Sets the stub of UIElement.get_IsEnabledCore()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.StubMoonPdfPanel.LogicalChildren">
+            <summary>Sets the stub of ContentControl.get_LogicalChildren()</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.StubMoonPdfPanel.VisualChildrenCount">
+            <summary>Sets the stub of FrameworkElement.get_VisualChildrenCount()</summary>
+        </member>
+        <member name="T:MoonPdfLib.Fakes.StubPasswordRequiredEventArgs">
+            <summary>Stub type of MoonPdfLib.PasswordRequiredEventArgs</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubPasswordRequiredEventArgs.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MoonPdfLib.Fakes.StubPasswordRequiredEventArgs.InitializeStub">
+            <summary>Initializes a new instance of type StubPasswordRequiredEventArgs</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.StubPasswordRequiredEventArgs.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.StubPasswordRequiredEventArgs.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MoonPdfLib.Fakes.StubPasswordRequiredEventArgs.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:MoonPdfLib.MuPdf.Fakes.ShimFileSource">
+            <summary>Shim type of MoonPdfLib.MuPdf.FileSource</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.ShimFileSource.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.ShimFileSource.#ctor(MoonPdfLib.MuPdf.FileSource)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.ShimFileSource.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.ShimFileSource.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.ShimFileSource.Bind(MoonPdfLib.MuPdf.IPdfSource)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimFileSource.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimFileSource.ConstructorString">
+            <summary>Sets the shim of FileSource.FileSource(String filename)</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimFileSource.FilenameGet">
+            <summary>Sets the shim of FileSource.get_Filename()</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimFileSource.FilenameSetString">
+            <summary>Sets the shim of FileSource.set_Filename(String value)</summary>
+        </member>
+        <member name="T:MoonPdfLib.MuPdf.Fakes.ShimFileSource.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimFileSource.AllInstances.FilenameGet">
+            <summary>Sets the shim of FileSource.get_Filename()</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimFileSource.AllInstances.FilenameSetString">
+            <summary>Sets the shim of FileSource.set_Filename(String value)</summary>
+        </member>
+        <member name="T:MoonPdfLib.MuPdf.Fakes.ShimMemorySource">
+            <summary>Shim type of MoonPdfLib.MuPdf.MemorySource</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.ShimMemorySource.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.ShimMemorySource.#ctor(MoonPdfLib.MuPdf.MemorySource)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.ShimMemorySource.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.ShimMemorySource.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.ShimMemorySource.Bind(MoonPdfLib.MuPdf.IPdfSource)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimMemorySource.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimMemorySource.BytesGet">
+            <summary>Sets the shim of MemorySource.get_Bytes()</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimMemorySource.BytesSetByteArray">
+            <summary>Sets the shim of MemorySource.set_Bytes(Byte[] value)</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimMemorySource.ConstructorByteArray">
+            <summary>Sets the shim of MemorySource.MemorySource(Byte[] bytes)</summary>
+        </member>
+        <member name="T:MoonPdfLib.MuPdf.Fakes.ShimMemorySource.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimMemorySource.AllInstances.BytesGet">
+            <summary>Sets the shim of MemorySource.get_Bytes()</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimMemorySource.AllInstances.BytesSetByteArray">
+            <summary>Sets the shim of MemorySource.set_Bytes(Byte[] value)</summary>
+        </member>
+        <member name="T:MoonPdfLib.MuPdf.Fakes.ShimMissingOrInvalidPdfPasswordException">
+            <summary>Shim type of MoonPdfLib.MuPdf.MissingOrInvalidPdfPasswordException</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.ShimMissingOrInvalidPdfPasswordException.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.ShimMissingOrInvalidPdfPasswordException.#ctor(MoonPdfLib.MuPdf.MissingOrInvalidPdfPasswordException)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.ShimMissingOrInvalidPdfPasswordException.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.ShimMissingOrInvalidPdfPasswordException.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.ShimMissingOrInvalidPdfPasswordException.Bind(System.Runtime.Serialization.ISerializable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimMissingOrInvalidPdfPasswordException.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimMissingOrInvalidPdfPasswordException.Constructor">
+            <summary>Sets the shim of MissingOrInvalidPdfPasswordException.MissingOrInvalidPdfPasswordException()</summary>
+        </member>
+        <member name="T:MoonPdfLib.MuPdf.Fakes.ShimMissingOrInvalidPdfPasswordException.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:MoonPdfLib.MuPdf.Fakes.ShimMuPdfWrapper">
+            <summary>Shim type of MoonPdfLib.MuPdf.MuPdfWrapper</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.ShimMuPdfWrapper.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.ShimMuPdfWrapper.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.ShimMuPdfWrapper.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimMuPdfWrapper.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimMuPdfWrapper.CountPagesIPdfSourceString">
+            <summary>Sets the shim of MuPdfWrapper.CountPages(IPdfSource source, String password)</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimMuPdfWrapper.ExtractPageIPdfSourceInt32SingleString">
+            <summary>Sets the shim of MuPdfWrapper.ExtractPage(IPdfSource source, Int32 pageNumber, Single zoomFactor, String password)</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimMuPdfWrapper.GetPageBoundsIPdfSourceImageRotationString">
+            <summary>Sets the shim of MuPdfWrapper.GetPageBounds(IPdfSource source, ImageRotation rotation, String password)</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimMuPdfWrapper.NeedsPasswordIPdfSource">
+            <summary>Sets the shim of MuPdfWrapper.NeedsPassword(IPdfSource source)</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimMuPdfWrapper.NeedsPasswordIntPtr">
+            <summary>Sets the shim of MuPdfWrapper.NeedsPassword(IntPtr doc)</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimMuPdfWrapper.RenderPageIntPtrIntPtrIntPtrSingle">
+            <summary>Sets the shim of MuPdfWrapper.RenderPage(IntPtr context, IntPtr document, IntPtr page, Single zoomFactor)</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimMuPdfWrapper.ValidatePasswordIntPtrString">
+            <summary>Sets the shim of MuPdfWrapper.ValidatePassword(IntPtr doc, String password)</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimMuPdfWrapper._GetPageBoundsb__0DoubleDouble">
+            <summary>Sets the shim of MuPdfWrapper.&lt;GetPageBounds&gt;b__0(Double width, Double height)</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.ShimMuPdfWrapper._GetPageBoundsb__1DoubleDouble">
+            <summary>Sets the shim of MuPdfWrapper.&lt;GetPageBounds&gt;b__1(Double width, Double height)</summary>
+        </member>
+        <member name="T:MoonPdfLib.MuPdf.Fakes.StubFileSource">
+            <summary>Stub type of MoonPdfLib.MuPdf.FileSource</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.StubFileSource.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.StubFileSource.InitializeStub">
+            <summary>Initializes a new instance of type StubFileSource</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.StubFileSource.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.StubFileSource.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.StubFileSource.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:MoonPdfLib.MuPdf.Fakes.StubIPdfSource">
+            <summary>Stub type of MoonPdfLib.MuPdf.IPdfSource</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.StubIPdfSource.#ctor">
+            <summary>Initializes a new instance of type StubIPdfSource</summary>
+        </member>
+        <member name="T:MoonPdfLib.MuPdf.Fakes.StubMemorySource">
+            <summary>Stub type of MoonPdfLib.MuPdf.MemorySource</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.StubMemorySource.#ctor(System.Byte[])">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.StubMemorySource.InitializeStub">
+            <summary>Initializes a new instance of type StubMemorySource</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.StubMemorySource.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.StubMemorySource.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.StubMemorySource.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException">
+            <summary>Stub type of MoonPdfLib.MuPdf.MissingOrInvalidPdfPasswordException</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.AttachBackingFieldToHelpLink">
+            <summary>Attaches delegates to emulate StubMissingOrInvalidPdfPasswordException.HelpLink as a property with a backing field.</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.AttachBackingFieldToSource">
+            <summary>Attaches delegates to emulate StubMissingOrInvalidPdfPasswordException.Source as a property with a backing field.</summary>
+        </member>
+        <member name="F:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.DataGet">
+            <summary>Sets the stub of Exception.get_Data()</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.GetBaseException">
+            <summary>Sets the stub of Exception.GetBaseException()</summary>
+        </member>
+        <member name="F:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.GetBaseException01">
+            <summary>Sets the stub of Exception.GetBaseException()</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>Sets the stub of Exception.GetObjectData(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="F:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.GetObjectDataSerializationInfoStreamingContext">
+            <summary>Sets the stub of Exception.GetObjectData(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="F:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.HelpLinkGet">
+            <summary>Sets the stub of Exception.get_HelpLink()</summary>
+        </member>
+        <member name="F:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.HelpLinkSetString">
+            <summary>Sets the stub of Exception.set_HelpLink(String value)</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.InitializeStub">
+            <summary>Initializes a new instance of type StubMissingOrInvalidPdfPasswordException</summary>
+        </member>
+        <member name="F:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.MessageGet">
+            <summary>Sets the stub of Exception.get_Message()</summary>
+        </member>
+        <member name="F:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.SourceGet">
+            <summary>Sets the stub of Exception.get_Source()</summary>
+        </member>
+        <member name="F:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.SourceSetString">
+            <summary>Sets the stub of Exception.set_Source(String value)</summary>
+        </member>
+        <member name="F:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.StackTraceGet">
+            <summary>Sets the stub of Exception.get_StackTrace()</summary>
+        </member>
+        <member name="M:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.ToString">
+            <summary>Sets the stub of Exception.ToString()</summary>
+        </member>
+        <member name="F:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.ToString01">
+            <summary>Sets the stub of Exception.ToString()</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.Data">
+            <summary>Sets the stub of Exception.get_Data()</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.HelpLink">
+            <summary>Sets the stub of Exception.get_HelpLink()</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.Message">
+            <summary>Sets the stub of Exception.get_Message()</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.Source">
+            <summary>Sets the stub of Exception.get_Source()</summary>
+        </member>
+        <member name="P:MoonPdfLib.MuPdf.Fakes.StubMissingOrInvalidPdfPasswordException.StackTrace">
+            <summary>Sets the stub of Exception.get_StackTrace()</summary>
+        </member>
+    </members>
+</doc>
