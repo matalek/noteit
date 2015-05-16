@@ -45,14 +45,7 @@ namespace NoteIt
 
         }
 
-        // source: http://www.deltasblog.co.uk/code-snippets/c-resizing-a-bitmap-image/
-        private static Bitmap ResizeBitmap(Bitmap sourceBMP, int width, int height)
-        {
-            Bitmap result = new Bitmap(width, height);
-            using (Graphics g = Graphics.FromImage(result))
-                g.DrawImage(sourceBMP, 0, 0, width, height);
-            return result;
-        }
+        
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

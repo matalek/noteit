@@ -132,6 +132,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BitmapHelper.cs" />
     <Compile Include="Slide.cs" />
     <Compile Include="SlideNote.cs" />
     <Compile Include="SlideText.xaml.cs">

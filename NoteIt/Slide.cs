@@ -30,9 +30,7 @@ namespace NoteIt
 
         private Grid grid;
 
-        private MoonPdfPanel panel;
-
-        private System.Drawing.Bitmap image;
+        private Bitmap image;
 
         public Slide()
         {
@@ -42,27 +40,11 @@ namespace NoteIt
             grid.ColumnDefinitions.Add(gridCol1);
             grid.ColumnDefinitions.Add(gridCol2);
             grid.Height = 200;
-
-            slideNote = new SlideNote("Notatka");
-
-            /*TextBox box = new TextBox();
-            box.Text = "Notatka";
-            box.FontSize = 14;
-            box.FontWeight = System.Windows.FontWeights.Bold;
-            box.Foreground = new SolidColorBrush(Colors.Green);
-            box.Width = 200;
-            box.Height = 100;
-            Grid.SetColumn(box, 1);
-            grid.Children.Add(box); */
-
+            
+            // adding empty slide
             slideText = new SlideText();
             Grid.SetColumn(slideText, 1);
             grid.Children.Add(slideText);
-        }
-
-        public Slide(String text)
-        {
-            slideNote = new SlideNote(text);
         }
 
         public SlideNote SlideNote
@@ -88,20 +70,9 @@ namespace NoteIt
         public void AddPdfSlide(FileSource fs, int page)
         {
 
-            panel = new MoonPdfPanel();
-            panel.InitializeComponent();
-            panel.Open(fs);
-            panel.GotoPage(page + 1);
-            panel.Height = 200;
-            panel.ZoomOut();
-            panel.ZoomOut();
-            panel.ZoomOut();
-
-
-            image = ResizeBitmap(MuPdfWrapper.ExtractPage(fs, page + 1), 400, 400);
+            image = BitmapHelper.ResizeBitmap(MuPdfWrapper.ExtractPage(fs, page + 1), 400, 400);
 
             System.Windows.Controls.Image img = new System.Windows.Controls.Image();
-            //img.Source = new BitmapImage()
 
             MemoryStream Ms = new MemoryStream();
             System.Drawing.Bitmap ObjBitmap = image;
@@ -117,18 +88,10 @@ namespace NoteIt
             grid.Children.Add(img);
         }
 
-        private static Bitmap ResizeBitmap(Bitmap sourceBMP, int width, int height)
-        {
-            Bitmap result = new Bitmap(width, height);
-            using (Graphics g = Graphics.FromImage(result))
-                g.DrawImage(sourceBMP, 0, 0, width, height);
-            return result;
-        }
-
         public void PrintSlide(PdfPTable table)
         {
 
-            iTextSharp.text.Image pdfImage = iTextSharp.text.Image.GetInstance(ResizeBitmap(image, 300, 200), System.Drawing.Imaging.ImageFormat.Bmp);
+            iTextSharp.text.Image pdfImage = iTextSharp.text.Image.GetInstance(BitmapHelper.ResizeBitmap(image, 300, 200), System.Drawing.Imaging.ImageFormat.Bmp);
 
             PdfPCell cell = new PdfPCell(pdfImage);
             table.AddCell(cell);

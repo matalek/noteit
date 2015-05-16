@@ -30,13 +30,6 @@ namespace NoteIt
 
         }
 
-        public Note(String text) 
-        {
-            Slide slide = new Slide(text);
-            slidesList = new List<Slide>();
-            slidesList.Add(slide);
-        }
-
         public void AddSlide()
         {
             slidesList.Add(new Slide());
