@@ -80,10 +80,10 @@ namespace NoteIt
             sw1.Close();
         }
 
-        public void Print(String fileName)
+        public void Print(FileStream fs)
         {
             Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
-            PdfWriter wri = PdfWriter.GetInstance(doc, new FileStream(fileName, FileMode.Create));
+            PdfWriter wri = PdfWriter.GetInstance(doc, fs);
             doc.Open();
 
             PdfPTable table = new PdfPTable(2);

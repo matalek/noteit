@@ -45,38 +45,6 @@ namespace NoteIt
 
         }
 
-        private void DisplayPdfSlides()
-        {
-            var mainPanel = new MoonPdfPanel();
-            mainPanel.InitializeComponent();
-            mainPanel.Open(fs);
-
-            List<MoonPdfPanel> slides = new List<MoonPdfPanel>();
-
-            GridHelpers.SetRowCount(PdfSlides, MuPdfWrapper.CountPages(fs));
-
-            for (int i = 0; i < MuPdfWrapper.CountPages(fs); i++)
-            {
-                var slide = new MoonPdfPanel();
-                slide.InitializeComponent();
-                slide.Open(fs);
-                slide.GotoPage(i + 1);
-                slide.Height = 200;
-                ContentControl contentControl = new ContentControl();
-                contentControl.SetValue(Grid.RowProperty, i);
- 
-                contentControl.Content = slide;
-
-                Debug.WriteLine(Grid.GetRow(contentControl));
-
-                PdfSlides.Children.Add(contentControl);
-            }
-
-            //slidesNumber = slides.Count;
-            slides.Clear();
-            
-        }
-
         // source: http://www.deltasblog.co.uk/code-snippets/c-resizing-a-bitmap-image/
         private static Bitmap ResizeBitmap(Bitmap sourceBMP, int width, int height)
         {
@@ -88,17 +56,21 @@ namespace NoteIt
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            // PdfSlides.Children.Add(new Label { Content = "Label" });
-            note.Print("test.pdf");
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = "PDF Files (.pdf)|*.pdf";
+            if (dialog.ShowDialog() == true)
+                note.Print(new FileStream(dialog.FileName, FileMode.Create));
         }
 
         private void btnOpenPdf_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == true)
-                fs = new FileSource(openFileDialog.FileName);
-            note.AddPdf(fs);
-            //DisplayPdfSlides();
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "PDF Files (.pdf)|*.pdf";
+            if (dialog.ShowDialog() == true)
+            {
+                fs = new FileSource(dialog.FileName);
+                note.AddPdf(fs);
+            }
         }
 
         private void btnAddSlide_Click(object sender, RoutedEventArgs e)
