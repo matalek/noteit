@@ -22,7 +22,6 @@ namespace NoteIt
         public SlideText()
         {
             InitializeComponent();
-            Text = "Tak";
         }
     }
 }
