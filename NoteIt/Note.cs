@@ -25,15 +25,35 @@ namespace NoteIt
         {
             this.panel = panel;
             slidesList = new List<Slide>();
-            slidesList.Add(new Slide());
+            slidesList.Add(new Slide(0, this));
             panel.Children.Add(slidesList.First().Grid);
 
         }
 
-        public void AddSlide()
+        public void AddSlideOnEnd()
         {
-            slidesList.Add(new Slide());
+            slidesList.Add(new Slide(slidesList.Count, this));
             panel.Children.Add(slidesList.Last().Grid);
+        }
+
+        public void AddSlide_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            string name = (sender as Button).Name;
+            // remove prefix addSlideButton from name
+            name = name.Substring(14, name.Length - 14);
+            int nr = Convert.ToInt32(name);
+            Debug.Write(nr + "\n");
+
+            AddSlideOnEnd();
+            
+            // from the one before last slide copy its content to next slide (till selected place)
+            for (int i = slidesList.Count - 2; i >= nr + 1; i--)
+            {
+                Debug.Write("copy " + i + " to " + (i+1).ToString() + "\n" );
+                slidesList[i + 1].SlideText = slidesList[i].SlideText;
+            }
+            // right now only text value, see note fo Slide.SlideText
+            slidesList[nr + 1].SlideText.Text = "";
         }
 
 
@@ -53,7 +73,7 @@ namespace NoteIt
                 else
                 {
                     // we have to create new, empty slide
-                    slidesList.Add(new Slide());
+                    slidesList.Add(new Slide(slidesList.Count, this));
                     slidesList.Last().AddPdfSlide(fs, i);
                     panel.Children.Add(slidesList.Last().Grid);
                 }

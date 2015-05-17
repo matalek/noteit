@@ -58,7 +58,7 @@ namespace NoteIt
 
         private void btnAddSlide_Click(object sender, RoutedEventArgs e)
         {
-            note.AddSlide();
+            note.AddSlideOnEnd();
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)

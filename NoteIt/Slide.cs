@@ -30,12 +30,16 @@ namespace NoteIt
 
         private Grid grid;
         private Grid rightGrid;
-        private Button newSlideButton;
+        private Button addSlideButton;
 
         private Bitmap image;
 
-        public Slide()
+        private int nr;
+
+        public Slide(int nr, Note note)
         {
+            this.nr = nr;
+
             grid = new Grid();
             ColumnDefinition gridCol1 = new ColumnDefinition();
             ColumnDefinition gridCol2 = new ColumnDefinition();
@@ -57,11 +61,14 @@ namespace NoteIt
             rightGrid.Children.Add(slideText);
 
             // adding new slide button under the slide
-            newSlideButton = new Button();
-            newSlideButton.Content = "New slide";
-            newSlideButton.Height = 20;
-            Grid.SetRow(newSlideButton, 1);
-            rightGrid.Children.Add(newSlideButton);
+            addSlideButton = new Button();
+            // keep slide number in name in order to identify button in on click event
+            addSlideButton.Name = "addSlideButton" + nr.ToString();
+            addSlideButton.Content = "Add slide";
+            addSlideButton.Height = 20;
+            addSlideButton.Click += note.AddSlide_Click;
+            Grid.SetRow(addSlideButton, 1);
+            rightGrid.Children.Add(addSlideButton);
 
             Grid.SetColumn(rightGrid, 1);
             grid.Children.Add(rightGrid);
@@ -76,6 +83,21 @@ namespace NoteIt
             set
             {
                 slideNote = value;
+            }
+        }
+
+        public SlideText SlideText
+        {
+            get
+            {
+                return slideText;
+            }
+            set
+            {
+                Debug.WriteLine("ustawiam " + slideText.Text + " na " + value.Text + " " + rightGrid.Children[0]);
+                // right now we copy only text, due to child removal issues, as described in:
+                // https://social.msdn.microsoft.com/Forums/vstudio/en-US/8a9fa5f1-5b55-45cc-8495-7a4527002568/disconnecting-children-from-a-logical-element?forum=wpf
+                slideText.Text = value.Text;
             }
         }
 
