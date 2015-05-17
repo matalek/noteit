@@ -132,11 +132,16 @@ namespace NoteIt
 
         public void PrintSlide(PdfPTable table)
         {
-
-            iTextSharp.text.Image pdfImage = iTextSharp.text.Image.GetInstance(BitmapHelper.ResizeBitmap(image, 300, 200), System.Drawing.Imaging.ImageFormat.Bmp);
-
-            PdfPCell cell = new PdfPCell(pdfImage);
-            table.AddCell(cell);
+            PdfPCell cell;
+            if (image != null)
+            {
+                // PDF image is not set for this slide (PDF slides weren't imported or user decided to add additional slides)
+                iTextSharp.text.Image pdfImage = iTextSharp.text.Image.GetInstance(BitmapHelper.ResizeBitmap(image, 300, 200), System.Drawing.Imaging.ImageFormat.Bmp);
+                cell = new PdfPCell(pdfImage);
+                table.AddCell(cell);
+            }
+            else
+                table.AddCell(new PdfPCell());
 
             cell = new PdfPCell(new iTextSharp.text.Paragraph(slideText.Text));
             table.AddCell(cell);   
