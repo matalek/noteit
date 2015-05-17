@@ -29,6 +29,8 @@ namespace NoteIt
         private SlideText slideText;
 
         private Grid grid;
+        private Grid rightGrid;
+        private Button newSlideButton;
 
         private Bitmap image;
 
@@ -40,11 +42,29 @@ namespace NoteIt
             grid.ColumnDefinitions.Add(gridCol1);
             grid.ColumnDefinitions.Add(gridCol2);
             grid.Height = 200;
-            
+
+            // grid displaying slideText and new slide button
+            rightGrid = new Grid();
+            RowDefinition gridRow1 = new RowDefinition();
+            RowDefinition gridRow2 = new RowDefinition();
+            gridRow2.Height = System.Windows.GridLength.Auto;
+            rightGrid.RowDefinitions.Add(gridRow1);
+            rightGrid.RowDefinitions.Add(gridRow2);
+
             // adding empty slide
             slideText = new SlideText();
-            Grid.SetColumn(slideText, 1);
-            grid.Children.Add(slideText);
+            Grid.SetRow(slideText, 0);
+            rightGrid.Children.Add(slideText);
+
+            // adding new slide button under the slide
+            newSlideButton = new Button();
+            newSlideButton.Content = "New slide";
+            newSlideButton.Height = 20;
+            Grid.SetRow(newSlideButton, 1);
+            rightGrid.Children.Add(newSlideButton);
+
+            Grid.SetColumn(rightGrid, 1);
+            grid.Children.Add(rightGrid);
         }
 
         public SlideNote SlideNote
@@ -97,9 +117,7 @@ namespace NoteIt
             table.AddCell(cell);
 
             cell = new PdfPCell(new iTextSharp.text.Paragraph(slideText.Text));
-            table.AddCell(cell);
-
-            
+            table.AddCell(cell);   
         }
 
     }

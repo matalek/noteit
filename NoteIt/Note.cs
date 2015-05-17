@@ -36,6 +36,7 @@ namespace NoteIt
             panel.Children.Add(slidesList.Last().Grid);
         }
 
+
         public void AddPdf(FileSource fs)
         {
             var mainPanel = new MoonPdfPanel();
