@@ -47,7 +47,7 @@ namespace NoteIt
 
         
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ExportPdf_Click(object sender, RoutedEventArgs e)
         {
             SaveFileDialog dialog = new SaveFileDialog();
             dialog.Filter = "PDF Files (.pdf)|*.pdf";
@@ -55,7 +55,18 @@ namespace NoteIt
                 note.Print(new FileStream(dialog.FileName, FileMode.Create));
         }
 
-        private void btnOpenPdf_Click(object sender, RoutedEventArgs e)
+
+        private void btnAddSlide_Click(object sender, RoutedEventArgs e)
+        {
+            note.AddSlide();
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void ImportPdf_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "PDF Files (.pdf)|*.pdf";
@@ -64,11 +75,6 @@ namespace NoteIt
                 fs = new FileSource(dialog.FileName);
                 note.AddPdf(fs);
             }
-        }
-
-        private void btnAddSlide_Click(object sender, RoutedEventArgs e)
-        {
-            note.AddSlide();
         }
 
     }

@@ -9,27 +9,46 @@
       d:DesignHeight="900" d:DesignWidth="900"
 	Title="NotePage">
 
+    
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <Label Grid.Column="0" Grid.Row="0" HorizontalContentAlignment="Center" FontSize="20">New note</Label>
+        <DockPanel Grid.Row="0">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_New note" />
+                    <MenuItem Header="_Open note" />
+                    <MenuItem Header="_Save note" />
+                    <Separator />
+                    <MenuItem Header="_Exit" Click="Exit_Click"/>
+                </MenuItem>
+                <MenuItem Header="_Import">
+                    <MenuItem Header="_Import PDF slides" Click="ImportPdf_Click"/>
+                </MenuItem>
+                <MenuItem Header="_Export">
+                    <MenuItem Header="_Export to PDF" Click="ExportPdf_Click"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
 
-        <Grid Grid.Column="0" Grid.Row="1">
+        <Label Grid.Column="0" Grid.Row="1" HorizontalContentAlignment="Center" FontSize="20">New note</Label>
+
+        <Grid Grid.Column="0" Grid.Row="2">
             <ScrollViewer>
                 <StackPanel Name="slidesPanel"></StackPanel>
             </ScrollViewer>
         </Grid>
         
-        <Button Grid.Row="2" Name="btnOpenPdf" Height="20" Width="200" Margin="95,10,605,10" Click="btnOpenPdf_Click">Open Pdf</Button>
-        <Button Grid.Row="2" Height="20" Width="200" Margin="332,10,368,10" Click="Button_Click">Save note</Button>
-        <Button Grid.Row="2" Name="btnAddSlide" Height="20" Width="200" Margin="574,10,126,10" Click="btnAddSlide_Click">New slide</Button>
+        <Button Grid.Row="3" Name="btnAddSlide" Height="20" Width="200" Margin="574,10,126,10" Click="btnAddSlide_Click">New slide</Button>
 
     </Grid>
 </Page>
