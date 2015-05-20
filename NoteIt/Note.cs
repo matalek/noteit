@@ -14,7 +14,7 @@ using iTextSharp.text.pdf;
 
 namespace NoteIt
 {
-    class Note
+    public class Note
     {
         private List<Slide> slidesList;
 

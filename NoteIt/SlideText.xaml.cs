@@ -18,13 +18,27 @@ namespace NoteIt
     /// <summary>
     /// Interaction logic for SlideText.xaml
     /// </summary>
-    public partial class SlideText : TextBox
+    public partial class SlideText : UserControl
     {
-        public SlideText()
+        public SlideText(int nr, Note note)
         {
             InitializeComponent();
+            deleteSlideButton.Name = "deleteSlideButton" + nr.ToString();
+            deleteSlideButton.Click += note.DeleteSlide_Click;
             
         }
 
+        public string Text
+        {
+            get
+            {
+                return textBox.Text;
+            }
+
+            set
+            {
+                textBox.Text = value;
+            }
+        }
     }
 }

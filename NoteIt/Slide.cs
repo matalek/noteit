@@ -60,7 +60,11 @@ namespace NoteIt
             rightGrid.RowDefinitions.Add(gridRow3);
 
             // adding empty slide
-            slideText = new SlideText();
+            slideText = new SlideText(nr, note);
+
+            slideText.MouseEnter += DisplayDeleteButton;
+
+
             Grid.SetRow(slideText, 0);
             rightGrid.Children.Add(slideText);
 
@@ -84,8 +88,16 @@ namespace NoteIt
             Grid.SetRow(deleteSlideButton, 2);
             rightGrid.Children.Add(deleteSlideButton);
 
+
+
+
             Grid.SetColumn(rightGrid, 1);
             grid.Children.Add(rightGrid);
+        }
+
+        private void DisplayDeleteButton(object sender, System.Windows.RoutedEventArgs e)
+        {
+            Debug.WriteLine("wyświetlam " + nr);
         }
 
         public void Remove()
