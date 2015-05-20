@@ -52,9 +52,35 @@ namespace NoteIt
                 Debug.Write("copy " + i + " to " + (i+1).ToString() + "\n" );
                 slidesList[i + 1].SlideText = slidesList[i].SlideText;
             }
-            // right now only text value, see note fo Slide.SlideText
+            // right now only text value, see note for Slide.SlideText
             slidesList[nr + 1].SlideText.Text = "";
         }
+
+        public void DeleteSlide_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            string name = (sender as Button).Name;
+            // remove prefix addSlideButton from name
+            name = name.Substring(17, name.Length - 17);
+            int nr = Convert.ToInt32(name);
+            Debug.Write(nr + "\n");
+
+            // copy slide's content to previoues slide
+            for (int i = nr; i < slidesList.Count - 1; i++)
+            {
+                Debug.WriteLine("przepisuję " + slidesList[i + 1].SlideText + " do " + slidesList[i].SlideText);
+                slidesList[i].SlideText = slidesList[i + 1].SlideText;
+                
+            }
+
+            // delete the last slide
+            Slide last = slidesList.Last();        
+            last.Remove();
+            // if no PDF image is present, we also delete it from stack panel
+            panel.Children.Remove(last.Grid);
+            slidesList.RemoveAt(slidesList.Count - 1);
+            
+        }
+
 
 
         public void AddPdf(FileSource fs)

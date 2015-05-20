@@ -31,6 +31,7 @@ namespace NoteIt
         private Grid grid;
         private Grid rightGrid;
         private Button addSlideButton;
+        private Button deleteSlideButton;
 
         private Bitmap image;
 
@@ -51,9 +52,12 @@ namespace NoteIt
             rightGrid = new Grid();
             RowDefinition gridRow1 = new RowDefinition();
             RowDefinition gridRow2 = new RowDefinition();
+            RowDefinition gridRow3 = new RowDefinition();
             gridRow2.Height = System.Windows.GridLength.Auto;
+            gridRow3.Height = System.Windows.GridLength.Auto;
             rightGrid.RowDefinitions.Add(gridRow1);
             rightGrid.RowDefinitions.Add(gridRow2);
+            rightGrid.RowDefinitions.Add(gridRow3);
 
             // adding empty slide
             slideText = new SlideText();
@@ -70,8 +74,23 @@ namespace NoteIt
             Grid.SetRow(addSlideButton, 1);
             rightGrid.Children.Add(addSlideButton);
 
+            // adding delete slide button
+            deleteSlideButton = new Button();
+            // keep slide number in name in order to identify button in on click event
+            deleteSlideButton.Name = "deleteSlideButton" + nr.ToString();
+            deleteSlideButton.Content = "Delete slide";
+            deleteSlideButton.Height = 20;
+            deleteSlideButton.Click += note.DeleteSlide_Click;
+            Grid.SetRow(deleteSlideButton, 2);
+            rightGrid.Children.Add(deleteSlideButton);
+
             Grid.SetColumn(rightGrid, 1);
             grid.Children.Add(rightGrid);
+        }
+
+        public void Remove()
+        {
+            grid.Children.Remove(rightGrid);
         }
 
         public SlideNote SlideNote
