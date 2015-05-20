@@ -23,8 +23,13 @@ namespace NoteIt
         public SlideText(int nr, Note note)
         {
             InitializeComponent();
+            
+            // keep slide number in name in order to identify button in on click event
             deleteSlideButton.Name = "deleteSlideButton" + nr.ToString();
             deleteSlideButton.Click += note.DeleteSlide_Click;
+
+            addSlideButton.Name = "addSlideButton" + nr.ToString();
+            addSlideButton.Click += note.AddSlide_Click;
             
         }
 
@@ -39,6 +44,16 @@ namespace NoteIt
             {
                 textBox.Text = value;
             }
+        }
+
+        private void UserControl_MouseEnter(object sender, MouseEventArgs e)
+        {
+            deleteSlideButton.Visibility = Visibility.Visible;
+        }
+
+        private void UserControl_MouseLeave(object sender, MouseEventArgs e)
+        {
+            deleteSlideButton.Visibility = Visibility.Hidden;
         }
     }
 }
