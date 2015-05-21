@@ -33,17 +33,19 @@ namespace NoteIt
             grid.ColumnDefinitions.Add(gridCol2);
             grid.Height = 20;
 
-            // adding empty slide
             var addSlideButton = new Button();
             addSlideButton.Height = 20;
             addSlideButton.Width = 400;
             addSlideButton.Content = "Add slide";
-            addSlideButton.Name = "addSlideButton0";
-            addSlideButton.Click += AddSlide_Click;
+            // use lamda expressions to pass slide number as argument to event handler
+            // -1 means inserting slide at the beggining
+            addSlideButton.Click += (sender, e) => AddSlide_Click(sender, e, -1);
+
             Grid.SetColumn(addSlideButton, 1);
             grid.Children.Add(addSlideButton);
             panel.Children.Add(grid);
 
+            // adding first empty slide
             slidesList = new List<Slide>();
             slidesList.Add(new Slide(0, this));
             panel.Children.Add(slidesList.First().Grid);
@@ -56,14 +58,8 @@ namespace NoteIt
             panel.Children.Add(slidesList.Last().Grid);
         }
 
-        public void AddSlide_Click(object sender, System.Windows.RoutedEventArgs e)
+        public void AddSlide_Click(object sender, System.Windows.RoutedEventArgs e, int nr)
         {
-            string name = (sender as Button).Name;
-            // remove prefix addSlideButton from name
-            name = name.Substring(14, name.Length - 14);
-            int nr = Convert.ToInt32(name);
-            Debug.Write(nr + "\n");
-
             AddSlideOnEnd();
             
             // from the one before last slide copy its content to next slide (till selected place)
@@ -76,14 +72,8 @@ namespace NoteIt
             slidesList[nr + 1].SlideText.Text = "";
         }
 
-        public void DeleteSlide_Click(object sender, System.Windows.RoutedEventArgs e)
+        public void DeleteSlide_Click(object sender, System.Windows.RoutedEventArgs e, int nr)
         {
-            string name = (sender as Button).Name;
-            // remove prefix addSlideButton from name
-            name = name.Substring(17, name.Length - 17);
-            int nr = Convert.ToInt32(name);
-            Debug.Write(nr + "\n");
-
             // copy slide's content to previoues slide
             for (int i = nr; i < slidesList.Count - 1; i++)
             {

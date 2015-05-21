@@ -24,12 +24,9 @@ namespace NoteIt
         {
             InitializeComponent();
             
-            // keep slide number in name in order to identify button in on click event
-            deleteSlideButton.Name = "deleteSlideButton" + nr.ToString();
-            deleteSlideButton.Click += note.DeleteSlide_Click;
-
-            addSlideButton.Name = "addSlideButton" + nr.ToString();
-            addSlideButton.Click += note.AddSlide_Click;
+            // use lamda expressions to pass slide number as argument to event handler
+            deleteSlideButton.Click += (sender, e) => note.DeleteSlide_Click(sender, e, nr);
+            addSlideButton.Click += (sender, e) => note.AddSlide_Click(sender, e, nr);
             
         }
 
