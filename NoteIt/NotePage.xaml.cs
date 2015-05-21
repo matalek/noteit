@@ -28,7 +28,7 @@ namespace NoteIt
     /// <summary>
     /// Interaction logic for NotePage.xaml
     /// </summary>
-    public partial class NotePage : Page
+    public partial class NotePage : Window
     {
 
         private FileSource fs;
