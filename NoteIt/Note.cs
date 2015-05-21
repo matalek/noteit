@@ -23,6 +23,16 @@ namespace NoteIt
 
         private TextBox titleBox;
 
+        private bool pdfPresent = false;
+
+        public bool IsPdfPresent
+        {
+            get
+            {
+                return pdfPresent;
+            }
+        }
+
         // crates note with one empty slide
         public Note(StackPanel panel)
         {
@@ -122,6 +132,8 @@ namespace NoteIt
 
         public void AddPdf(FileSource fs)
         {
+            pdfPresent = true;
+
             var mainPanel = new MoonPdfPanel();
             mainPanel.InitializeComponent();
             mainPanel.Open(fs);

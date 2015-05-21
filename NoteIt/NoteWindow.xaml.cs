@@ -65,6 +65,19 @@ namespace NoteIt
 
         private void ImportPdf_Click(object sender, RoutedEventArgs e)
         {
+            if (note.IsPdfPresent)
+            {
+                MessageBoxButton btnMessageBox = MessageBoxButton.YesNoCancel;
+                MessageBoxImage icnMessageBox = MessageBoxImage.Warning;
+
+                MessageBoxResult rsltMessageBox = MessageBox.Show(
+                    "You will loose currently imported PDF file from your note. Do you want to continue?", "Import PDF",
+                    btnMessageBox, icnMessageBox);
+
+                if (rsltMessageBox != MessageBoxResult.Yes)
+                    return;
+            }
+
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "PDF Files (.pdf)|*.pdf";
             if (dialog.ShowDialog() == true)
