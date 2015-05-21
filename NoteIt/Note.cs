@@ -24,6 +24,26 @@ namespace NoteIt
         public Note(StackPanel panel)
         {
             this.panel = panel;
+
+            // adding "Add slide" button at the beggining
+            var grid = new Grid();
+            ColumnDefinition gridCol1 = new ColumnDefinition();
+            ColumnDefinition gridCol2 = new ColumnDefinition();
+            grid.ColumnDefinitions.Add(gridCol1);
+            grid.ColumnDefinitions.Add(gridCol2);
+            grid.Height = 20;
+
+            // adding empty slide
+            var addSlideButton = new Button();
+            addSlideButton.Height = 20;
+            addSlideButton.Width = 400;
+            addSlideButton.Content = "Add slide";
+            addSlideButton.Name = "addSlideButton0";
+            addSlideButton.Click += AddSlide_Click;
+            Grid.SetColumn(addSlideButton, 1);
+            grid.Children.Add(addSlideButton);
+            panel.Children.Add(grid);
+
             slidesList = new List<Slide>();
             slidesList.Add(new Slide(0, this));
             panel.Children.Add(slidesList.First().Grid);
