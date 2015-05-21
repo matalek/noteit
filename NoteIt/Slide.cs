@@ -24,7 +24,6 @@ namespace NoteIt
 {
     class Slide
     {
-        private SlideNote slideNote;
 
         private SlideText slideText;
 
@@ -54,18 +53,6 @@ namespace NoteIt
         public void Remove()
         {
             grid.Children.Remove(slideText);
-        }
-
-        public SlideNote SlideNote
-        {
-            get
-            {
-                return slideNote;
-            }
-            set
-            {
-                slideNote = value;
-            }
         }
 
         public SlideText SlideText

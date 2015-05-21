@@ -114,7 +114,7 @@ namespace NoteIt
 
             foreach (Slide slide in slidesList)
             {
-                sw1.Write(slide.SlideNote.Text);
+                sw1.Write(slide.SlideText.Text);
             }
 
             sw1.Close();

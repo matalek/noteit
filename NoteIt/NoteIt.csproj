@@ -134,7 +134,6 @@
     </ApplicationDefinition>
     <Compile Include="BitmapHelper.cs" />
     <Compile Include="Slide.cs" />
-    <Compile Include="SlideNote.cs" />
     <Compile Include="SlideText.xaml.cs">
       <DependentUpon>SlideText.xaml</DependentUpon>
     </Compile>
