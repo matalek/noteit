@@ -35,6 +35,10 @@
                 <MenuItem Header="_Export">
                     <MenuItem Header="_Export to PDF" Click="ExportPdf_Click"/>
                 </MenuItem>
+                <MenuItem Header="_Help">
+                    <Separator />
+                    <MenuItem Header="_About" Click="About_Click"></MenuItem>
+                </MenuItem>
             </Menu>
         </DockPanel>
 
