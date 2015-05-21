@@ -9,12 +9,11 @@ namespace NoteIt
 {
     class BitmapHelper
     {
-        // source: http://www.deltasblog.co.uk/code-snippets/c-resizing-a-bitmap-image/
-        public static Bitmap ResizeBitmap(Bitmap sourceBMP, int width, int height)
+        public static Bitmap ResizeBitmapToWidth(Bitmap source, int width)
         {
+            int height = (int)((double) width / (double) source.Width * (double) source.Height);
             Bitmap result = new Bitmap(width, height);
-            using (Graphics g = Graphics.FromImage(result))
-                g.DrawImage(sourceBMP, 0, 0, width, height);
+            Graphics.FromImage(result).DrawImage(source, 0, 0, width, height);
             return result;
         }
     }

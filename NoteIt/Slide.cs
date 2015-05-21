@@ -94,7 +94,7 @@ namespace NoteIt
         public void AddPdfSlide(FileSource fs, int page)
         {
 
-            image = BitmapHelper.ResizeBitmap(MuPdfWrapper.ExtractPage(fs, page + 1), 400, 400);
+            image = BitmapHelper.ResizeBitmapToWidth(MuPdfWrapper.ExtractPage(fs, page + 1), 400);
 
             imageControl = new System.Windows.Controls.Image();
 
@@ -125,7 +125,7 @@ namespace NoteIt
             if (image != null)
             {
                 // PDF image is not set for this slide (PDF slides weren't imported or user decided to add additional slides)
-                iTextSharp.text.Image pdfImage = iTextSharp.text.Image.GetInstance(BitmapHelper.ResizeBitmap(image, 300, 200), System.Drawing.Imaging.ImageFormat.Bmp);
+                iTextSharp.text.Image pdfImage = iTextSharp.text.Image.GetInstance(BitmapHelper.ResizeBitmapToWidth(image, 300), System.Drawing.Imaging.ImageFormat.Bmp);
                 cell = new PdfPCell(pdfImage);   
             }
             else
