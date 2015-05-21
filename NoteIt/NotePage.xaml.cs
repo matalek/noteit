@@ -33,10 +33,7 @@ namespace NoteIt
 
         private FileSource fs;
 
-        //private int slidesNumber = 0;
-
         private Note note;
-        private int slideNotesNumber = 1;
 
         public NotePage()
         {
