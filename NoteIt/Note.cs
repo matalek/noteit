@@ -82,13 +82,19 @@ namespace NoteIt
                 
             }
 
-            // delete the last slide
-            Slide last = slidesList.Last();        
-            last.Remove();
-            // if no PDF image is present, we also delete it from stack panel
-            panel.Children.Remove(last.Grid);
-            slidesList.RemoveAt(slidesList.Count - 1);
-            
+            Slide last = slidesList.Last();
+            if (last.IsPdfPresent())
+            {
+                // if PDF slide is present, we just clear the content
+                last.Text = "";
+            }
+            else
+            {
+                // if no PDF image is present, delete the last slide
+                last.Remove();
+                panel.Children.Remove(last.Grid);
+                slidesList.RemoveAt(slidesList.Count - 1);
+            }
         }
 
 

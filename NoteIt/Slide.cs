@@ -77,6 +77,18 @@ namespace NoteIt
             }
         }
 
+        public string Text
+        {
+            get
+            {
+                return slideText.Text;
+            }
+            set
+            {
+                slideText.Text = value;
+            }
+        }
+
         public void AddPdfSlide(FileSource fs, int page)
         {
 
@@ -115,5 +127,10 @@ namespace NoteIt
             table.AddCell(cell);   
         }
 
+        // checks, wheter there is an assigned PDF image for this slide
+        public bool IsPdfPresent()
+        {
+            return image != null;
+        }
     }
 }
