@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
+using System.Windows;
 using System.Windows.Controls;
 using System.Diagnostics;
 using MoonPdfLib;
@@ -74,6 +75,20 @@ namespace NoteIt
 
         public void DeleteSlide_Click(object sender, System.Windows.RoutedEventArgs e, int nr)
         {
+            // for not empty slide, ask user before deleting it
+            if (slidesList[nr].Text != "")
+            {
+                MessageBoxButton btnMessageBox = MessageBoxButton.YesNoCancel;
+                MessageBoxImage icnMessageBox = MessageBoxImage.Warning;
+
+                MessageBoxResult rsltMessageBox = MessageBox.Show(
+                    "Do you want to delete a note for this slide?", "Delete slide note", btnMessageBox, icnMessageBox);
+
+                if (rsltMessageBox != MessageBoxResult.Yes)
+                    return;
+            }
+
+
             // copy slide's content to previoues slide
             for (int i = nr; i < slidesList.Count - 1; i++)
             {
