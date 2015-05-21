@@ -28,14 +28,14 @@ namespace NoteIt
     /// <summary>
     /// Interaction logic for NotePage.xaml
     /// </summary>
-    public partial class NotePage : Window
+    public partial class NoteWindow : Window
     {
 
         private FileSource fs;
 
         private Note note;
 
-        public NotePage()
+        public NoteWindow()
         {
             InitializeComponent();
             note = new Note(slidesPanel);

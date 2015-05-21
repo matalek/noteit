@@ -148,7 +148,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="NotePage.xaml">
+    <Page Include="NoteWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -159,8 +159,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Note.cs" />
-    <Compile Include="NotePage.xaml.cs">
-      <DependentUpon>NotePage.xaml</DependentUpon>
+    <Compile Include="NoteWindow.xaml.cs">
+      <DependentUpon>NoteWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
