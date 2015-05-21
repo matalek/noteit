@@ -80,5 +80,12 @@ namespace NoteIt
             aboutWindow.ShowDialog();
         }
 
+        private void NewNote_Click(object sender, RoutedEventArgs e)
+        {
+            // TO DO: check if saved
+            slidesPanel.Children.Clear();
+            note = new Note(slidesPanel);
+        }
+
     }
 }

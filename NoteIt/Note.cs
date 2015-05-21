@@ -21,10 +21,16 @@ namespace NoteIt
 
         private StackPanel panel;
 
+        private TextBox titleBox;
+
         // crates note with one empty slide
         public Note(StackPanel panel)
         {
             this.panel = panel;
+
+            // adding note title
+            titleBox = new TitleBox();
+            panel.Children.Add(titleBox);
 
             // adding "Add slide" button at the beggining
             var grid = new Grid();
@@ -156,6 +162,10 @@ namespace NoteIt
             Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
             PdfWriter wri = PdfWriter.GetInstance(doc, fs);
             doc.Open();
+
+            // adding title
+            var title = new iTextSharp.text.Paragraph(titleBox.Text);
+            doc.Add(title);
 
             PdfPTable table = new PdfPTable(2);
 

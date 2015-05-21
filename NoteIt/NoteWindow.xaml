@@ -15,7 +15,6 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
             <RowDefinition />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
@@ -23,7 +22,7 @@
         <DockPanel Grid.Row="0">
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="_File">
-                    <MenuItem Header="_New note" />
+                    <MenuItem Header="_New note" Click="NewNote_Click"/>
                     <MenuItem Header="_Open note" />
                     <MenuItem Header="_Save note" />
                     <Separator />
@@ -42,15 +41,13 @@
             </Menu>
         </DockPanel>
 
-        <Label Grid.Column="0" Grid.Row="1" HorizontalContentAlignment="Center" FontSize="20">New note</Label>
-
-        <Grid Grid.Column="0" Grid.Row="2">
+        <Grid Grid.Column="0" Grid.Row="1">
             <ScrollViewer>
                 <StackPanel Name="slidesPanel"></StackPanel>
             </ScrollViewer>
         </Grid>
         
-        <Button Grid.Row="3" Name="btnAddSlide" Height="20" Width="200" Margin="574,10,126,10" Click="btnAddSlide_Click">New slide</Button>
+        <Button Grid.Row="2" Name="btnAddSlide" Height="20" Width="200" Margin="574,10,126,10" Click="btnAddSlide_Click">New slide</Button>
 
     </Grid>
 </Window>
