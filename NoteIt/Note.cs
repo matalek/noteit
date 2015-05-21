@@ -168,6 +168,7 @@ namespace NoteIt
             doc.Add(title);
 
             PdfPTable table = new PdfPTable(2);
+            table.DefaultCell.Border = Rectangle.NO_BORDER;
 
             foreach (Slide slide in slidesList)
                 slide.PrintSlide(table);
