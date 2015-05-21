@@ -54,7 +54,7 @@ namespace NoteIt
             addSlideButton.Height = 20;
             addSlideButton.Width = 400;
             addSlideButton.Content = "Add slide";
-            // use lamda expressions to pass slide number as argument to event handler
+            // use lambda expressions to pass slide number as argument to event handler
             // -1 means inserting slide at the beggining
             addSlideButton.Click += (sender, e) => AddSlide_Click(sender, e, -1);
 
@@ -87,6 +87,14 @@ namespace NoteIt
             }
             // right now only text value, see note for Slide.SlideText
             slidesList[nr + 1].SlideText.Text = "";
+        }
+
+        private void RemoveLastSlide()
+        {
+            Slide last = slidesList.Last();
+            last.Remove();
+            panel.Children.Remove(last.Grid);
+            slidesList.RemoveAt(slidesList.Count - 1);
         }
 
         public void DeleteSlide_Click(object sender, System.Windows.RoutedEventArgs e, int nr)
@@ -122,9 +130,7 @@ namespace NoteIt
             else
             {
                 // if no PDF image is present, delete the last slide
-                last.Remove();
-                panel.Children.Remove(last.Grid);
-                slidesList.RemoveAt(slidesList.Count - 1);
+                RemoveLastSlide();
             }
         }
 
@@ -138,7 +144,9 @@ namespace NoteIt
             mainPanel.InitializeComponent();
             mainPanel.Open(fs);
 
-            for (int i = 0; i < MuPdfWrapper.CountPages(fs); i++)
+            var newSlidesNumber = MuPdfWrapper.CountPages(fs);
+
+            for (int i = 0; i < newSlidesNumber; i++)
             {
                 if (i < slidesList.Count)
                 {
@@ -151,9 +159,23 @@ namespace NoteIt
                     slidesList.Add(new Slide(slidesList.Count, this));
                     slidesList.Last().AddPdfSlide(fs, i);
                     panel.Children.Add(slidesList.Last().Grid);
-                }
+                }  
+            }
 
-                
+            // we have to delete images from previous PDF and empty slides at the end of note
+            bool stillDeleting = true; // have we met only empty slide
+            for (int i = slidesList.Count - 1; i >= newSlidesNumber; i--)
+            {
+                // removing old PDF
+                slidesList[i].RemovePdfSlide();
+                if (slidesList[i].Text == "")
+                {
+                    if (stillDeleting)
+                        // we can delete it from StackPanel
+                        RemoveLastSlide();
+                }
+                else
+                    stillDeleting = false;
             }
 
         }

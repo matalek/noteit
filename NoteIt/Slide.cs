@@ -31,6 +31,8 @@ namespace NoteIt
 
         private Bitmap image;
 
+        System.Windows.Controls.Image imageControl;
+
         private int nr;
 
         public Slide(int nr, Note note)
@@ -94,7 +96,7 @@ namespace NoteIt
 
             image = BitmapHelper.ResizeBitmap(MuPdfWrapper.ExtractPage(fs, page + 1), 400, 400);
 
-            System.Windows.Controls.Image img = new System.Windows.Controls.Image();
+            imageControl = new System.Windows.Controls.Image();
 
             MemoryStream Ms = new MemoryStream();
             System.Drawing.Bitmap ObjBitmap = image;
@@ -104,10 +106,16 @@ namespace NoteIt
             ObjBitmapImage.BeginInit();
             ObjBitmapImage.StreamSource = Ms;
             ObjBitmapImage.EndInit();
-            img.Source = ObjBitmapImage;
+            imageControl.Source = ObjBitmapImage;
 
-            Grid.SetColumn(img, 0);
-            grid.Children.Add(img);
+            Grid.SetColumn(imageControl, 0);
+            grid.Children.Add(imageControl);
+        }
+
+        public void RemovePdfSlide()
+        {
+            grid.Children.Remove(imageControl);
+            image = null;
         }
 
         public void PrintSlide(PdfPTable table)
