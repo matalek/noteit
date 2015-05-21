@@ -125,8 +125,8 @@ namespace NoteIt
             if (image != null)
             {
                 // PDF image is not set for this slide (PDF slides weren't imported or user decided to add additional slides)
-                iTextSharp.text.Image pdfImage = iTextSharp.text.Image.GetInstance(BitmapHelper.ResizeBitmapToWidth(image, 300), System.Drawing.Imaging.ImageFormat.Bmp);
-                cell = new PdfPCell(pdfImage);   
+                iTextSharp.text.Image pdfImage = iTextSharp.text.Image.GetInstance(BitmapHelper.ResizeBitmapToWidth(image, 250), System.Drawing.Imaging.ImageFormat.Bmp);
+                cell = new PdfPCell(pdfImage);
             }
             else
                 cell = new PdfPCell();
@@ -136,6 +136,7 @@ namespace NoteIt
 
             cell = new PdfPCell(new iTextSharp.text.Paragraph(slideText.Text));
             cell.BorderWidth = 0;
+            cell.VerticalAlignment = Element.ALIGN_MIDDLE;
             table.AddCell(cell);   
         }
 

@@ -193,16 +193,20 @@ namespace NoteIt
 
         public void Print(FileStream fs)
         {
-            Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
+            Document doc = new Document(iTextSharp.text.PageSize.A4, 10, 10, 10, 10);
             PdfWriter wri = PdfWriter.GetInstance(doc, fs);
             doc.Open();
 
-            // adding title
-            var title = new iTextSharp.text.Paragraph(titleBox.Text);
+            // printing title
+            Font titleFont = FontFactory.GetFont("Arial", 30, Font.BOLD);
+            var title = new iTextSharp.text.Paragraph(titleBox.Text, titleFont);
+            title.Alignment = Element.ALIGN_CENTER;
+            title.SpacingAfter = 20;
             doc.Add(title);
 
             PdfPTable table = new PdfPTable(2);
-            table.DefaultCell.Border = Rectangle.NO_BORDER;
+            int[] widths = {280, 200};
+            table.SetWidths(widths);
 
             foreach (Slide slide in slidesList)
                 slide.PrintSlide(table);
