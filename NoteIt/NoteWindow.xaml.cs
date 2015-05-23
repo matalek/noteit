@@ -39,7 +39,7 @@ namespace NoteIt
         {
             InitializeComponent();
             note = new Note(slidesPanel);
-
+            note.AddSlideOnEnd();
         }
 
         
@@ -98,6 +98,35 @@ namespace NoteIt
             // TO DO: check if saved
             slidesPanel.Children.Clear();
             note = new Note(slidesPanel);
+            note.AddSlideOnEnd();
+        }
+
+        private void SaveNote_Click(object sender, RoutedEventArgs e)
+        {
+            if (note.FileAssigned())
+                note.Save();
+            else
+                SaveNoteAs_Click(sender, e);
+        }
+
+        private void SaveNoteAs_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = "NoteIt Files (.note)|*.note";
+            if (dialog.ShowDialog() == true)
+                note.SaveAs(dialog.FileName);
+        }
+        
+
+        private void OpenNote_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "NoteIt Files (.note)|*.note";
+            if (dialog.ShowDialog() == true)
+            {
+                slidesPanel.Children.Clear();
+                note = new Note(slidesPanel, dialog.FileName);
+            }
         }
 
     }

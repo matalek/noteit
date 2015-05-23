@@ -23,8 +23,9 @@
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="_File">
                     <MenuItem Header="_New note" Click="NewNote_Click"/>
-                    <MenuItem Header="_Open note" />
-                    <MenuItem Header="_Save note" />
+                    <MenuItem Header="_Open note" Click="OpenNote_Click"/>
+                    <MenuItem Header="_Save note" Click="SaveNote_Click"/>
+                    <MenuItem Header="_Save note as" Click="SaveNoteAs_Click"/>
                     <Separator />
                     <MenuItem Header="_Exit" Click="Exit_Click"/>
                 </MenuItem>

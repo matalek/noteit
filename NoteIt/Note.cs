@@ -7,6 +7,7 @@ using System.IO;
 
 using System.Windows;
 using System.Windows.Controls;
+using System.Xml;
 using System.Diagnostics;
 using MoonPdfLib;
 using MoonPdfLib.MuPdf;
@@ -25,6 +26,8 @@ namespace NoteIt
 
         private bool pdfPresent = false;
 
+        string fileName; // where our note is saved
+
         public bool IsPdfPresent
         {
             get
@@ -41,6 +44,8 @@ namespace NoteIt
             // adding note title
             titleBox = new TitleBox();
             panel.Children.Add(titleBox);
+
+            slidesList = new List<Slide>();
 
             // adding "Add slide" button at the beggining
             var grid = new Grid();
@@ -61,18 +66,40 @@ namespace NoteIt
             Grid.SetColumn(addSlideButton, 1);
             grid.Children.Add(addSlideButton);
             panel.Children.Add(grid);
+        }
 
-            // adding first empty slide
-            slidesList = new List<Slide>();
-            slidesList.Add(new Slide(0, this));
-            panel.Children.Add(slidesList.First().Grid);
-
+        public Note(StackPanel panel, string fileName) : this(panel)
+        {
+            this.fileName = fileName;
+            var xr = new XmlTextReader(fileName);
+            string nodeName;
+            while (xr.Read())
+            {
+                nodeName = xr.Name;
+                switch (nodeName)
+                {
+                    case "Title":
+                        titleBox.Text = xr.ReadString();
+                        break;
+                    case "Slide":
+                        AddSlideOnEnd(xr.ReadString());
+                        break;
+                }
+            }
+            xr.Close();
+            
         }
 
         public void AddSlideOnEnd()
         {
             slidesList.Add(new Slide(slidesList.Count, this));
             panel.Children.Add(slidesList.Last().Grid);
+        }
+
+        public void AddSlideOnEnd(string text)
+        {
+            AddSlideOnEnd();
+            slidesList.Last().Text = text;
         }
 
         public void AddSlide_Click(object sender, System.Windows.RoutedEventArgs e, int nr)
@@ -180,15 +207,29 @@ namespace NoteIt
 
         }
 
-        public void Save(String fileName) {
-            StreamWriter sw1 = new StreamWriter(@"C:\Users\Aleksander\Desktop\result.txt");
+        public bool FileAssigned()
+        {
+            return fileName != null;
+        }
 
+        public void Save() {
+            var xr = new XmlTextWriter(fileName, null);
+            xr.Formatting = Formatting.Indented;
+            xr.Indentation = 4;
+            xr.WriteStartDocument();
+            xr.WriteStartElement("Note");
+            xr.WriteElementString("Title", titleBox.Text);
             foreach (Slide slide in slidesList)
-            {
-                sw1.Write(slide.SlideText.Text);
-            }
+                xr.WriteElementString("Slide", slide.Text);
+            xr.WriteEndElement();
+            xr.WriteEndDocument();
+            xr.Flush();
+            xr.Close();
+        }
 
-            sw1.Close();
+        public void SaveAs(String fileName) {
+            this.fileName = fileName;
+            Save();
         }
 
         public void Print(FileStream fs)
