@@ -58,8 +58,18 @@ namespace NoteIt
             note.AddSlideOnEnd();
         }
 
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (!ContinueIfUnsaved())
+                e.Cancel = true;
+        }
+
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
+            if (!ContinueIfUnsaved())
+                return;
+
             Application.Current.Shutdown();
         }
 
@@ -67,7 +77,7 @@ namespace NoteIt
         {
             if (note.IsPdfPresent)
             {
-                MessageBoxButton btnMessageBox = MessageBoxButton.YesNoCancel;
+                MessageBoxButton btnMessageBox = MessageBoxButton.YesNo;
                 MessageBoxImage icnMessageBox = MessageBoxImage.Warning;
 
                 MessageBoxResult rsltMessageBox = MessageBox.Show(
@@ -93,9 +103,29 @@ namespace NoteIt
             aboutWindow.ShowDialog();
         }
 
+        // if note isn't saved, asks user, if he wants to continue and returns his answer
+        private bool ContinueIfUnsaved()
+        {
+            if (!note.IsSaved)
+            {
+                MessageBoxButton btnMessageBox = MessageBoxButton.YesNo;
+                MessageBoxImage icnMessageBox = MessageBoxImage.Warning;
+
+                MessageBoxResult rsltMessageBox = MessageBox.Show(
+                    "Your note isn't saved. You will loose all changes since previous save. Do you want to continue?", "New note",
+                    btnMessageBox, icnMessageBox);
+
+                return (rsltMessageBox == MessageBoxResult.Yes);
+            }
+            else
+                return true;
+        }
+
         private void NewNote_Click(object sender, RoutedEventArgs e)
         {
-            // TO DO: check if saved
+            if (!ContinueIfUnsaved())
+                return;
+
             slidesPanel.Children.Clear();
             note = new Note(slidesPanel);
             note.AddSlideOnEnd();
@@ -120,6 +150,9 @@ namespace NoteIt
 
         private void OpenNote_Click(object sender, RoutedEventArgs e)
         {
+            if (!ContinueIfUnsaved())
+                return;
+
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "NoteIt Files (.note)|*.note";
             if (dialog.ShowDialog() == true)

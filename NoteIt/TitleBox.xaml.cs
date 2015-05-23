@@ -19,9 +19,13 @@ namespace NoteIt
     /// </summary>
     public partial class TitleBox : TextBox
     {
-        public TitleBox()
+        private Note note;
+        
+        public TitleBox(Note note)
         {
             InitializeComponent();
+            this.note = note;
+            this.TextChanged += (sender, e) => note.MarkAsChanged();
         }
     }
 }

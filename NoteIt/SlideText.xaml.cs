@@ -27,6 +27,8 @@ namespace NoteIt
             // use lamda expressions to pass slide number as argument to event handler
             deleteSlideButton.Click += (sender, e) => note.DeleteSlide_Click(sender, e, nr);
             addSlideButton.Click += (sender, e) => note.AddSlide_Click(sender, e, nr);
+
+            textBox.TextChanged += (sender, e) => note.MarkAsChanged();
             
         }
 

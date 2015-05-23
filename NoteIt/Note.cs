@@ -26,7 +26,9 @@ namespace NoteIt
 
         private bool pdfPresent = false;
 
-        string fileName; // where our note is saved
+        string fileName; // where the note is saved
+
+        bool isSaved = true; // true, if user hasn't made any changes since last saving
 
         public bool IsPdfPresent
         {
@@ -42,7 +44,7 @@ namespace NoteIt
             this.panel = panel;
 
             // adding note title
-            titleBox = new TitleBox();
+            titleBox = new TitleBox(this);
             panel.Children.Add(titleBox);
 
             slidesList = new List<Slide>();
@@ -225,11 +227,25 @@ namespace NoteIt
             xr.WriteEndDocument();
             xr.Flush();
             xr.Close();
+            isSaved = true;
         }
 
         public void SaveAs(String fileName) {
             this.fileName = fileName;
             Save();
+        }
+
+        public void MarkAsChanged()
+        {
+            isSaved = false;
+        }
+
+        public bool IsSaved
+        {
+            get
+            {
+                return isSaved;
+            }
         }
 
         public void Print(FileStream fs)
