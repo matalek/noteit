@@ -22,13 +22,14 @@ using MoonPdfLib.MuPdf;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 
+using MahApps.Metro.Controls;
 
 namespace NoteIt
 {
     /// <summary>
     /// Interaction logic for NotePage.xaml
     /// </summary>
-    public partial class NoteWindow : Window
+    public partial class NoteWindow : MetroWindow
     {
 
         private FileSource fs;

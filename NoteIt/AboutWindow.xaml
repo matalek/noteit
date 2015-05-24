@@ -1,6 +1,7 @@
-﻿<Window x:Class="NoteIt.AboutWindow"
+﻿<Controls:MetroWindow x:Class="NoteIt.AboutWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         Title="About NoteIt" Height="170" Width="300">
     <StackPanel>
         <TextBlock FontSize="30" Height="60">NoteIt</TextBlock>
@@ -8,4 +9,4 @@
         <TextBlock>© Aleksander Matusiak 2015.</TextBlock>
         <TextBlock>All rights reserved.</TextBlock>
     </StackPanel>
-</Window>
+</Controls:MetroWindow>
