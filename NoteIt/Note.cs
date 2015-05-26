@@ -263,30 +263,5 @@ namespace NoteIt
                 return slidesList;
             }
         }
-
-        public void Print(FileStream fs)
-        {
-            Document doc = new Document(iTextSharp.text.PageSize.A4, 10, 10, 10, 10);
-            PdfWriter wri = PdfWriter.GetInstance(doc, fs);
-            doc.Open();
-
-            // printing title
-            Font titleFont = FontFactory.GetFont("Arial", 30, Font.BOLD);
-            var title = new iTextSharp.text.Paragraph(titleBox.Text, titleFont);
-            title.Alignment = Element.ALIGN_CENTER;
-            title.SpacingAfter = 20;
-            doc.Add(title);
-
-            PdfPTable table = new PdfPTable(2);
-            int[] widths = {280, 200};
-            table.SetWidths(widths);
-
-            foreach (Slide slide in slidesList)
-                slide.PrintSlide(table);
-            
-            doc.Add(table);
-            doc.Close();
-        }
-
     }
 }

@@ -126,28 +126,6 @@ namespace NoteIt
             image = null;
         }
 
-        public void PrintSlide(PdfPTable table)
-        {
-            PdfPCell cell;
-            
-            if (image != null)
-            {
-                // PDF image is not set for this slide (PDF slides weren't imported or user decided to add additional slides)
-                iTextSharp.text.Image pdfImage = iTextSharp.text.Image.GetInstance(BitmapHelper.ResizeBitmapToWidth(image, 250), System.Drawing.Imaging.ImageFormat.Bmp);
-                cell = new PdfPCell(pdfImage);
-            }
-            else
-                cell = new PdfPCell();
-
-            cell.BorderWidth = 0;
-            table.AddCell(cell);
-
-            cell = new PdfPCell(new iTextSharp.text.Paragraph(slideText.Text));
-            cell.BorderWidth = 0;
-            cell.VerticalAlignment = Element.ALIGN_MIDDLE;
-            table.AddCell(cell);   
-        }
-
         // checks, wheter there is an assigned PDF image for this slide
         public bool IsPdfPresent()
         {
