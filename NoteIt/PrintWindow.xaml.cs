@@ -35,6 +35,10 @@ namespace NoteIt
             if (verticalRadioButton.IsChecked == true)
             {
                 printStrategy = new VerticalPrintStrategy();
+            } 
+            else
+            {
+                printStrategy = new HorizontalPrintStrategy();
             }
 
             SaveFileDialog dialog = new SaveFileDialog();
