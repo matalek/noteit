@@ -12,9 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+
 using System.IO;
 using System.Diagnostics;
-
 using Microsoft.Win32;
 using System.Drawing;
 using MoonPdfLib;
@@ -22,21 +22,19 @@ using MoonPdfLib.MuPdf;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 
-using MahApps.Metro.Controls;
-
 namespace NoteIt
 {
     /// <summary>
     /// Interaction logic for NotePage.xaml
     /// </summary>
-    public partial class NoteWindow : MetroWindow
+    public partial class NotePage : Page
     {
-
+        
         private FileSource fs;
 
         private Note note;
 
-        public NoteWindow()
+        public NotePage()
         {
             InitializeComponent();
             note = new Note(slidesPanel);
@@ -47,10 +45,10 @@ namespace NoteIt
 
         private void ExportPdf_Click(object sender, RoutedEventArgs e)
         {
-            var printWindow = new PrintWindow(note);
-            printWindow.ShowDialog();
-
-            
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = "PDF Files (.pdf)|*.pdf";
+            if (dialog.ShowDialog() == true)
+                note.Print(new FileStream(dialog.FileName, FileMode.Create));
         }
 
 

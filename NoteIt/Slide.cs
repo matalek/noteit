@@ -22,7 +22,7 @@ using iTextSharp.text.pdf;
 
 namespace NoteIt
 {
-    class Slide
+    public class Slide
     {
 
         private SlideText slideText;
@@ -88,6 +88,14 @@ namespace NoteIt
             set
             {
                 slideText.Text = value;
+            }
+        }
+
+        public Bitmap Image
+        {
+            get
+            {
+                return image;
             }
         }
 

@@ -248,6 +248,22 @@ namespace NoteIt
             }
         }
 
+        public string Title
+        {
+            get
+            {
+                return titleBox.Text;
+            }
+        }
+
+        public List<Slide> SlidesList
+        {
+            get
+            {
+                return slidesList;
+            }
+        }
+
         public void Print(FileStream fs)
         {
             Document doc = new Document(iTextSharp.text.PageSize.A4, 10, 10, 10, 10);

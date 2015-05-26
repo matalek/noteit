@@ -142,6 +142,10 @@
       <DependentUpon>AboutWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="BitmapHelper.cs" />
+    <Compile Include="IPrintStrategy.cs" />
+    <Compile Include="PrintWindow.xaml.cs">
+      <DependentUpon>PrintWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Slide.cs" />
     <Compile Include="SlideText.xaml.cs">
       <DependentUpon>SlideText.xaml</DependentUpon>
@@ -153,11 +157,16 @@
     <Compile Include="TitleBox.xaml.cs">
       <DependentUpon>TitleBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VerticalPrintStrategy.cs" />
     <Page Include="AboutWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="NoteWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PrintWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
