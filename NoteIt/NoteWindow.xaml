@@ -49,8 +49,6 @@
                 <StackPanel Name="slidesPanel"></StackPanel>
             </ScrollViewer>
         </Grid>
-        
-        <Button Grid.Row="2" Name="btnAddSlide" Height="20" Width="200" Margin="574,10,126,10" Click="btnAddSlide_Click">New slide</Button>
 
     </Grid>
 </Controls:MetroWindow>

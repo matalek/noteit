@@ -53,13 +53,6 @@ namespace NoteIt
             
         }
 
-
-        private void btnAddSlide_Click(object sender, RoutedEventArgs e)
-        {
-            note.AddSlideOnEnd();
-        }
-
-
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (!ContinueIfUnsaved())
