@@ -147,6 +147,8 @@
     <Compile Include="PrintWindow.xaml.cs">
       <DependentUpon>PrintWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SavableNote.cs" />
+    <Compile Include="SavableSlide.cs" />
     <Compile Include="Slide.cs" />
     <Compile Include="SlideText.xaml.cs">
       <DependentUpon>SlideText.xaml</DependentUpon>

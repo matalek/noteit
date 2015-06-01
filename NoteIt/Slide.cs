@@ -52,6 +52,13 @@ namespace NoteIt
             grid.Children.Add(slideText);
         }
 
+        public Slide(int nr, Note note, SavableSlide savableSlide) : this(nr, note)
+        {
+            Text = savableSlide.Text;
+            image = savableSlide.Image;
+            AddPdfImageControl();
+        }
+
         public void Remove()
         {
             grid.Children.Remove(slideText);
@@ -101,9 +108,12 @@ namespace NoteIt
 
         public void AddPdfSlide(FileSource fs, int page)
         {
-
             image = BitmapHelper.ResizeBitmapToWidth(MuPdfWrapper.ExtractPage(fs, page + 1), 400);
+            AddPdfImageControl();
+        }
 
+        private void AddPdfImageControl()
+        {
             imageControl = new System.Windows.Controls.Image();
 
             MemoryStream Ms = new MemoryStream();

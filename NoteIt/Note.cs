@@ -14,6 +14,9 @@ using MoonPdfLib.MuPdf;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+
 namespace NoteIt
 {
     public class Note
@@ -28,7 +31,7 @@ namespace NoteIt
 
         string fileName; // where the note is saved
 
-        bool isSaved = true; // true, if user hasn't made any changes since last saving
+        bool isSaved; // true, if user hasn't made any changes since last saving
 
         public bool IsPdfPresent
         {
@@ -68,28 +71,25 @@ namespace NoteIt
             Grid.SetColumn(addSlideButton, 1);
             grid.Children.Add(addSlideButton);
             panel.Children.Add(grid);
+
+            isSaved = true;
         }
 
         public Note(StackPanel panel, string fileName) : this(panel)
         {
             this.fileName = fileName;
-            var xr = new XmlTextReader(fileName);
-            string nodeName;
-            while (xr.Read())
-            {
-                nodeName = xr.Name;
-                switch (nodeName)
-                {
-                    case "Title":
-                        titleBox.Text = xr.ReadString();
-                        break;
-                    case "Slide":
-                        AddSlideOnEnd(xr.ReadString());
-                        break;
-                }
-            }
-            xr.Close();
-            
+
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read);
+            SavableNote savableNote = (SavableNote)formatter.Deserialize(stream);
+            stream.Close();
+
+            titleBox.Text = savableNote.Title;
+
+            foreach (SavableSlide slide in savableNote.SlidesList)
+                AddSlideOnEnd(slide);
+
+            isSaved = true;
         }
 
         public void AddSlideOnEnd()
@@ -98,10 +98,10 @@ namespace NoteIt
             panel.Children.Add(slidesList.Last().Grid);
         }
 
-        public void AddSlideOnEnd(string text)
+        public void AddSlideOnEnd(SavableSlide slide)
         {
-            AddSlideOnEnd();
-            slidesList.Last().Text = text;
+            slidesList.Add(new Slide(slidesList.Count, this, slide));
+            panel.Children.Add(slidesList.Last().Grid);
         }
 
         public void AddSlide_Click(object sender, System.Windows.RoutedEventArgs e, int nr)
@@ -214,23 +214,23 @@ namespace NoteIt
             return fileName != null;
         }
 
-        public void Save() {
-            var xr = new XmlTextWriter(fileName, null);
-            xr.Formatting = Formatting.Indented;
-            xr.Indentation = 4;
-            xr.WriteStartDocument();
-            xr.WriteStartElement("Note");
-            xr.WriteElementString("Title", titleBox.Text);
+        public void Save() 
+        {
+            SavableNote savableNote = new SavableNote();
+            savableNote.Title = titleBox.Text;
             foreach (Slide slide in slidesList)
-                xr.WriteElementString("Slide", slide.Text);
-            xr.WriteEndElement();
-            xr.WriteEndDocument();
-            xr.Flush();
-            xr.Close();
+                savableNote.AddSlide(new SavableSlide(slide));
+
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, savableNote);
+            stream.Close();
+
             isSaved = true;
         }
 
-        public void SaveAs(String fileName) {
+        public void SaveAs(String fileName)
+        {
             this.fileName = fileName;
             Save();
         }

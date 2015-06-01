@@ -21,6 +21,8 @@ using MoonPdfLib;
 using MoonPdfLib.MuPdf;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 using MahApps.Metro.Controls;
 
