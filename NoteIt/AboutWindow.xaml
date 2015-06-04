@@ -4,10 +4,15 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         Title="About NoteIt" Height="200" Width="300"
         EnableDWMDropShadow="True"
-        WindowStartupLocation="CenterScreen">
-    <StackPanel>
-        <TextBlock FontSize="30" Height="60">NoteIt</TextBlock>
-        <TextBlock>Version 0.3</TextBlock>
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <StackPanel Margin="10 10 10 10">
+        <DockPanel>
+            <Image Source="Open_PDF_booklet_128.png" Height="50" Margin="0 0 30 0"></Image>
+            <TextBlock FontSize="40" Height="60" >NoteIt</TextBlock>
+        </DockPanel>
+        
+        <TextBlock>Version 1.0</TextBlock>
         <TextBlock>© Aleksander Matusiak 2015.</TextBlock>
         <TextBlock Height="30">All rights reserved.</TextBlock>
         <TextBlock>App icon made by Freepik from <Hyperlink NavigateUri="http://www.flaticon.com" RequestNavigate="Hyperlink_RequestNavigate">www.flaticon.com</Hyperlink>.</TextBlock>
