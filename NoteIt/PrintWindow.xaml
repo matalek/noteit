@@ -2,15 +2,34 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-        Title="PrintWindow" Height="300" Width="300"
+        Title="PrintWindow" Height="270" Width="300"
         EnableDWMDropShadow="True"
-        WindowStartupLocation="CenterScreen" >
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+
+    <Control.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Icons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Control.Resources>
+
     <StackPanel>
-        <TextBox>Choose exporting to PDF method:</TextBox>
-        <RadioButton GroupName="Method" Name="verticalRadioButton"  IsChecked="True">Vertical allignment</RadioButton>
-        <RadioButton GroupName="Method" Name="horizontalRadioButton">Horizontal allignment</RadioButton>
-        <CheckBox Name="slideNumbersCheckBox">Print slide numbers</CheckBox>
+        <TextBlock FontSize="17" Margin="10 ">Choose exporting to PDF method:</TextBlock>
+        <RadioButton GroupName="Method" Name="verticalRadioButton"  IsChecked="True" Margin="20 5">Vertical allignment</RadioButton>
+        <RadioButton GroupName="Method" Name="horizontalRadioButton" Margin="20 5">Horizontal allignment</RadioButton>
+        <CheckBox Name="slideNumbersCheckBox" Margin="10 30">Print slide numbers</CheckBox>
         
-        <Button Click="Button_Click">Export!</Button>
+        <Button Click="Button_Click" Width="120">
+            <DockPanel>
+                <TextBlock FontSize="12" Margin="0 5 0 0">Export!</TextBlock>
+                <Rectangle Margin="10 0 0 0" Width="20" Height="25">
+                    <Rectangle.Fill>
+                        <VisualBrush Visual="{StaticResource appbar_page_file_pdf}" />
+                    </Rectangle.Fill>
+                </Rectangle>
+            </DockPanel> 
+        </Button>
     </StackPanel>
 </Controls:MetroWindow>
