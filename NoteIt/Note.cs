@@ -183,13 +183,13 @@ namespace NoteIt
                 if (i < slidesList.Count)
                 {
                     // the slide was already created
-                    slidesList[i].AddPdfSlide(fs, i);
+                    slidesList[i].AddPdfSlide(fs);
                 }
                 else
                 {
                     // we have to create new, empty slide
                     slidesList.Add(new Slide(slidesList.Count, this));
-                    slidesList.Last().AddPdfSlide(fs, i);
+                    slidesList.Last().AddPdfSlide(fs);
                     panel.Children.Add(slidesList.Last().Grid);
                 }  
             }

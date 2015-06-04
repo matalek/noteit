@@ -114,9 +114,9 @@ namespace NoteIt
             }
         }
 
-        public void AddPdfSlide(FileSource fs, int page)
+        public void AddPdfSlide(FileSource fs)
         {
-            image = BitmapHelper.ResizeBitmapToWidth(MuPdfWrapper.ExtractPage(fs, page + 1), 400);
+            image = BitmapHelper.ResizeBitmapToWidth(MuPdfWrapper.ExtractPage(fs, nr + 1), 400);
             AddPdfImageControl();
         }
 
