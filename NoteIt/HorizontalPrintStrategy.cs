@@ -40,6 +40,7 @@ namespace NoteIt
             
             PdfPTable table = new PdfPTable(slidesPerRow);
             table.SetWidths(new int[] { 1, 1, 1 });
+            table.WidthPercentage = 95;
 
             int slidesPrinted = 0;
 
