@@ -71,7 +71,8 @@ namespace NoteIt
 
             if (slide.Image != null)
             {
-                var pdfImage = iTextSharp.text.Image.GetInstance(BitmapHelper.ResizeBitmapToWidth(slide.Image, 250), System.Drawing.Imaging.ImageFormat.Bmp);
+                var pdfImage = iTextSharp.text.Image.GetInstance(slide.Image, System.Drawing.Imaging.ImageFormat.Bmp);
+                pdfImage.ScaleToFit(250, 250);
                 cell.AddElement(pdfImage);
             }
             // else: PDF image is not set for this slide (PDF slides weren't imported or user decided to add additional slides)
