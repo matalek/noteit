@@ -42,7 +42,7 @@ namespace NoteIt
         public NoteWindow()
         {
             InitializeComponent();
-            note = new Note(slidesPanel);
+            note = new Note(slidesPanel, this);
             note.AddSlideOnEnd();
         }
 
@@ -130,7 +130,7 @@ namespace NoteIt
                 return;
 
             slidesPanel.Children.Clear();
-            note = new Note(slidesPanel);
+            note = new Note(slidesPanel, this);
             note.AddSlideOnEnd();
         }
 
@@ -162,7 +162,7 @@ namespace NoteIt
             if (dialog.ShowDialog() == true)
             {
                 slidesPanel.Children.Clear();
-                note = new Note(slidesPanel, dialog.FileName);
+                note = new Note(slidesPanel, dialog.FileName, this);
             }
         }
 

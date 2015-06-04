@@ -17,6 +17,9 @@ using iTextSharp.text.pdf;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 
+using MahApps.Metro.Controls;
+using MahApps.Metro.Controls.Dialogs;
+
 namespace NoteIt
 {
     public class Note
@@ -29,9 +32,11 @@ namespace NoteIt
 
         private bool pdfPresent = false;
 
-        string fileName; // where the note is saved
+        private string fileName; // where the note is saved
 
-        bool isSaved; // true, if user hasn't made any changes since last saving
+        private bool isSaved; // true, if user hasn't made any changes since last saving
+
+        private NoteWindow noteWindow;
 
         public bool IsPdfPresent
         {
@@ -42,9 +47,10 @@ namespace NoteIt
         }
 
         // crates note with one empty slide
-        public Note(StackPanel panel)
+        public Note(StackPanel panel, NoteWindow noteWindow)
         {
             this.panel = panel;
+            this.noteWindow = noteWindow;
 
             // adding note title
             titleBox = new TitleBox(this);
@@ -75,7 +81,7 @@ namespace NoteIt
             isSaved = true;
         }
 
-        public Note(StackPanel panel, string fileName) : this(panel)
+        public Note(StackPanel panel, string fileName, NoteWindow noteWindow) : this(panel, noteWindow)
         {
             this.fileName = fileName;
 
@@ -126,18 +132,17 @@ namespace NoteIt
             slidesList.RemoveAt(slidesList.Count - 1);
         }
 
-        public void DeleteSlide_Click(object sender, System.Windows.RoutedEventArgs e, int nr)
+        public async void DeleteSlide_Click(object sender, System.Windows.RoutedEventArgs e, int nr)
         {
             // for not empty slide, ask user before deleting it
             if (slidesList[nr].Text != "")
             {
-                MessageBoxButton btnMessageBox = MessageBoxButton.YesNoCancel;
-                MessageBoxImage icnMessageBox = MessageBoxImage.Warning;
 
-                MessageBoxResult rsltMessageBox = MessageBox.Show(
-                    "Do you want to delete a note for this slide?", "Delete slide note", btnMessageBox, icnMessageBox);
+                MessageDialogResult result = await noteWindow.ShowMessageAsync(
+                    "This note is not empty!", "Do you want to delete a note for this slide?",
+                    MessageDialogStyle.AffirmativeAndNegative);
 
-                if (rsltMessageBox != MessageBoxResult.Yes)
+                if (result != MessageDialogResult.Affirmative)  
                     return;
             }
 
