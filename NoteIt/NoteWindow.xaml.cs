@@ -25,6 +25,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 
 using MahApps.Metro.Controls;
+using MahApps.Metro.Controls.Dialogs;
 
 namespace NoteIt
 {
@@ -45,42 +46,49 @@ namespace NoteIt
             note.AddSlideOnEnd();
         }
 
-        
-
         private void ExportPdf_Click(object sender, RoutedEventArgs e)
         {
             var printWindow = new PrintWindow(note);
-            printWindow.ShowDialog();
-
-            
+            printWindow.ShowDialog();   
         }
 
+        // we need to use this field in order to prevent window from closing when asynchronously displaying message
+        private bool isClosingConfirmed = false;
+        
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (!ContinueIfUnsaved())
-                e.Cancel = true;
+            if (isClosingConfirmed)
+                return; // will close
+
+            CloseApp();
+            e.Cancel = true;
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            if (!ContinueIfUnsaved())
+            CloseApp();
+        }
+
+        private async void CloseApp()
+        {
+            bool shallContinue = await ContinueIfUnsaved();
+            if (!shallContinue)
                 return;
 
+            isClosingConfirmed = true;
             Application.Current.Shutdown();
         }
 
-        private void ImportPdf_Click(object sender, RoutedEventArgs e)
+        private async void ImportPdf_Click(object sender, RoutedEventArgs e)
         {
             if (note.IsPdfPresent)
             {
-                MessageBoxButton btnMessageBox = MessageBoxButton.YesNo;
-                MessageBoxImage icnMessageBox = MessageBoxImage.Warning;
+                MessageDialogResult result = await this.ShowMessageAsync(
+                    "You have already imported a PDF file!", 
+                    "You will loose currently imported PDF file from your note. Do you want to continue?",
+                    MessageDialogStyle.AffirmativeAndNegative);
 
-                MessageBoxResult rsltMessageBox = MessageBox.Show(
-                    "You will loose currently imported PDF file from your note. Do you want to continue?", "Import PDF",
-                    btnMessageBox, icnMessageBox);
-
-                if (rsltMessageBox != MessageBoxResult.Yes)
+                if (result != MessageDialogResult.Affirmative)  
                     return;
             }
 
@@ -100,26 +108,25 @@ namespace NoteIt
         }
 
         // if note isn't saved, asks user, if he wants to continue and returns his answer
-        private bool ContinueIfUnsaved()
+        private async Task<bool> ContinueIfUnsaved()
         {
             if (!note.IsSaved)
             {
-                MessageBoxButton btnMessageBox = MessageBoxButton.YesNo;
-                MessageBoxImage icnMessageBox = MessageBoxImage.Warning;
+                MessageDialogResult result = await this.ShowMessageAsync(
+                    "Your note is not saved!", 
+                    "You will loose all changes since previous save. Do you want to continue?",
+                    MessageDialogStyle.AffirmativeAndNegative);
 
-                MessageBoxResult rsltMessageBox = MessageBox.Show(
-                    "Your note isn't saved. You will loose all changes since previous save. Do you want to continue?", "New note",
-                    btnMessageBox, icnMessageBox);
-
-                return (rsltMessageBox == MessageBoxResult.Yes);
+                return (result == MessageDialogResult.Affirmative);                
             }
             else
                 return true;
         }
 
-        private void NewNote_Click(object sender, RoutedEventArgs e)
+        private async void NewNote_Click(object sender, RoutedEventArgs e)
         {
-            if (!ContinueIfUnsaved())
+            bool shallContinue = await ContinueIfUnsaved();
+            if (!shallContinue)
                 return;
 
             slidesPanel.Children.Clear();
@@ -144,9 +151,10 @@ namespace NoteIt
         }
         
 
-        private void OpenNote_Click(object sender, RoutedEventArgs e)
+        private async void OpenNote_Click(object sender, RoutedEventArgs e)
         {
-            if (!ContinueIfUnsaved())
+            bool shallContinue = await ContinueIfUnsaved();
+            if (!shallContinue)
                 return;
 
             OpenFileDialog dialog = new OpenFileDialog();
