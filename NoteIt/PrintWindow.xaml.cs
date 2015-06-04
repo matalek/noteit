@@ -14,12 +14,14 @@ using System.Windows.Shapes;
 using Microsoft.Win32;
 using System.IO;
 
+using MahApps.Metro.Controls;
+
 namespace NoteIt
 {
     /// <summary>
     /// Interaction logic for PrintWindow.xaml
     /// </summary>
-    public partial class PrintWindow : Window
+    public partial class PrintWindow : MetroWindow
     {
         private Note note;
 

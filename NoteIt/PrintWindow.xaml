@@ -1,6 +1,7 @@
-﻿<Window x:Class="NoteIt.PrintWindow"
+﻿<Controls:MetroWindow x:Class="NoteIt.PrintWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         Title="PrintWindow" Height="300" Width="300">
     <StackPanel>
         <TextBox>Choose exporting to PDF method:</TextBox>
@@ -9,4 +10,4 @@
         
         <Button Click="Button_Click">Export!</Button>
     </StackPanel>
-</Window>
+</Controls:MetroWindow>
