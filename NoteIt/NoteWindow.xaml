@@ -12,7 +12,10 @@
 	Title="NoteIt"
     Closing="Window_Closing"
     Icon="Open_PDF_booklet_128.png"
-    ShowIconOnTitleBar="True">
+    ShowIconOnTitleBar="True"
+    SaveWindowPosition="True"
+    GlowBrush="{DynamicResource AccentColorBrush}"
+    WindowStartupLocation="CenterScreen">
 
     <Window.Resources>
         <ResourceDictionary>

@@ -2,7 +2,9 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-        Title="PrintWindow" Height="300" Width="300">
+        Title="PrintWindow" Height="300" Width="300"
+        EnableDWMDropShadow="True"
+        WindowStartupLocation="CenterScreen" >
     <StackPanel>
         <TextBox>Choose exporting to PDF method:</TextBox>
         <RadioButton GroupName="Method" Name="verticalRadioButton"  IsChecked="True">Vertical allignment</RadioButton>
