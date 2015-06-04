@@ -15,20 +15,23 @@ using iTextSharp.text.pdf;
 
 namespace NoteIt
 {
-    class HorizontalPrintStrategy : IPrintStrategy
+    class HorizontalPrintStrategy : PrintStrategy
     {
-        public void Print(Note note, FileStream fs)
+        protected override PrintStrategy.OrientationType Orientation { get { return OrientationType.Horizontal; } }
+
+        public override void Print(Note note, FileStream fs)
         {
-            Document doc = new Document(iTextSharp.text.PageSize.A4.Rotate(), 10, 10, 10, 10);
+            Document doc = new Document(iTextSharp.text.PageSize.A4.Rotate(), Margins[0], Margins[1], Margins[2], Margins[3]);
             PdfWriter wri = PdfWriter.GetInstance(doc, fs);
+
+            TableHeader tevent = new TableHeader();
+            wri.PageEvent = tevent;
+            tevent.Header = note.Title;
+            tevent.Orientation = OrientationType.Horizontal;
+
             doc.Open();
 
-            // printing title
-            Font titleFont = FontFactory.GetFont(FontFactory.HELVETICA, BaseFont.CP1250, 30, Font.BOLD);
-            var title = new iTextSharp.text.Paragraph(note.Title, titleFont);
-            title.Alignment = Element.ALIGN_CENTER;
-            title.SpacingAfter = 20;
-            doc.Add(title);
+            PrintTitle(note, doc);
 
             // NOTE: A4 points size: 595x842
 
@@ -36,8 +39,7 @@ namespace NoteIt
             int slidesPerRow = 3;
             
             PdfPTable table = new PdfPTable(slidesPerRow);
-            int[] widths = { 270, 270, 270 };
-            table.SetWidths(widths);
+            table.SetWidths(new int[] { 1, 1, 1 });
 
             int slidesPrinted = 0;
 

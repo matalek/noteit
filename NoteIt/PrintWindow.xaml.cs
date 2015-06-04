@@ -33,7 +33,7 @@ namespace NoteIt
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            IPrintStrategy printStrategy = null;
+            PrintStrategy printStrategy = null;
             if (verticalRadioButton.IsChecked == true)
             {
                 printStrategy = new VerticalPrintStrategy();

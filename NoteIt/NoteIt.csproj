@@ -143,7 +143,7 @@
     </Compile>
     <Compile Include="BitmapHelper.cs" />
     <Compile Include="HorizontalPrintStrategy.cs" />
-    <Compile Include="IPrintStrategy.cs" />
+    <Compile Include="PrintStrategy.cs" />
     <Compile Include="PrintWindow.xaml.cs">
       <DependentUpon>PrintWindow.xaml</DependentUpon>
     </Compile>
