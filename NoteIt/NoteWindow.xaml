@@ -15,7 +15,8 @@
     ShowIconOnTitleBar="True"
     SaveWindowPosition="True"
     GlowBrush="{DynamicResource AccentColorBrush}"
-    WindowStartupLocation="CenterScreen">
+    WindowStartupLocation="CenterScreen"
+                      MinWidth="900">
 
     <Window.Resources>
         <ResourceDictionary>

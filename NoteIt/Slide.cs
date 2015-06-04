@@ -134,6 +134,10 @@ namespace NoteIt
             ObjBitmapImage.EndInit();
             imageControl.Source = ObjBitmapImage;
 
+            System.Windows.Thickness margin = imageControl.Margin;
+            margin.Bottom = 40;
+            imageControl.Margin = margin;
+
             Grid.SetColumn(imageControl, 0);
             grid.Children.Add(imageControl);
         }
