@@ -12,7 +12,7 @@ namespace NoteIt
 {
     abstract class PrintStrategy
     {
-        public abstract void Print(Note note, FileStream fs);
+        public abstract void Print(Note note, FileStream fs, bool withSlideNumbers);
 
         protected void PrintTitle(Note note, Document doc)
         {

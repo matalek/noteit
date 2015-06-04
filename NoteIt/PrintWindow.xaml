@@ -7,6 +7,7 @@
         <TextBox>Choose exporting to PDF method:</TextBox>
         <RadioButton GroupName="Method" Name="verticalRadioButton"  IsChecked="True">Vertical allignment</RadioButton>
         <RadioButton GroupName="Method" Name="horizontalRadioButton">Horizontal allignment</RadioButton>
+        <CheckBox Name="slideNumbersCheckBox">Print slide numbers</CheckBox>
         
         <Button Click="Button_Click">Export!</Button>
     </StackPanel>

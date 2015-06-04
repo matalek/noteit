@@ -19,7 +19,7 @@ namespace NoteIt
     {
         protected override PrintStrategy.OrientationType Orientation { get { return OrientationType.Horizontal; } }
 
-        public override void Print(Note note, FileStream fs)
+        public override void Print(Note note, FileStream fs, bool withSlideNumbers)
         {
             Document doc = new Document(iTextSharp.text.PageSize.A4.Rotate(), Margins[0], Margins[1], Margins[2], Margins[3]);
             PdfWriter wri = PdfWriter.GetInstance(doc, fs);
@@ -46,7 +46,7 @@ namespace NoteIt
             while (slidesPrinted < note.SlidesList.Count)
             {
                 for (int i = slidesPrinted; i < Math.Min(note.SlidesList.Count, slidesPrinted + slidesPerRow); i++)
-                    PrintSlide(note.SlidesList[i], table);
+                    PrintSlide(note.SlidesList[i], table, withSlideNumbers);
 
                 slidesPrinted += slidesPerRow;
             }
@@ -55,9 +55,19 @@ namespace NoteIt
             doc.Close();
         }
 
-        private void PrintSlide(Slide slide, PdfPTable table)
+        private void PrintSlide(Slide slide, PdfPTable table, bool withSlideNumbers)
         {
             PdfPCell cell = new PdfPCell();
+            Font font = FontFactory.GetFont(FontFactory.HELVETICA, BaseFont.CP1250, 10);
+
+            if (withSlideNumbers)
+            {
+                int nr = slide.Nr + 1;
+                var paragraph_nr = new iTextSharp.text.Paragraph(nr.ToString(), font);
+                paragraph_nr.SpacingAfter = 10;
+                paragraph_nr.Alignment = Element.ALIGN_CENTER;
+                cell.AddElement(paragraph_nr);
+            }
 
             if (slide.Image != null)
             {
@@ -68,7 +78,6 @@ namespace NoteIt
 
             cell.BorderWidth = 0;
 
-            Font font = FontFactory.GetFont(FontFactory.HELVETICA, BaseFont.CP1250, 10);
             var paragraph = new iTextSharp.text.Paragraph(slide.Text, font);
             paragraph.SpacingAfter = 30;
             paragraph.Alignment = Element.ALIGN_MIDDLE;

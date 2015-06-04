@@ -47,7 +47,7 @@ namespace NoteIt
             dialog.Filter = "PDF Files (.pdf)|*.pdf";
             if (dialog.ShowDialog() == true)
             {
-                printStrategy.Print(note, new FileStream(dialog.FileName, FileMode.Create));
+                printStrategy.Print(note, new FileStream(dialog.FileName, FileMode.Create), slideNumbersCheckBox.IsChecked.Value);
                 Close();
             }
 
