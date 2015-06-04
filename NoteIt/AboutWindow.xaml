@@ -2,11 +2,12 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-        Title="About NoteIt" Height="170" Width="300">
+        Title="About NoteIt" Height="200" Width="300">
     <StackPanel>
         <TextBlock FontSize="30" Height="60">NoteIt</TextBlock>
         <TextBlock>Version 0.3</TextBlock>
         <TextBlock>© Aleksander Matusiak 2015.</TextBlock>
-        <TextBlock>All rights reserved.</TextBlock>
+        <TextBlock Height="30">All rights reserved.</TextBlock>
+        <TextBlock>App icon made by Freepik from <Hyperlink NavigateUri="http://www.flaticon.com" RequestNavigate="Hyperlink_RequestNavigate">www.flaticon.com</Hyperlink>.</TextBlock>
     </StackPanel>
 </Controls:MetroWindow>

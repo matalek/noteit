@@ -9,7 +9,19 @@
       mc:Ignorable="d" 
       d:DesignHeight="900" d:DesignWidth="900"
 	Title="NoteIt"
-    Closing="Window_Closing">
+    Closing="Window_Closing"
+    Icon="Open_PDF_booklet_128.png"
+    ShowIconOnTitleBar="True">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Icons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    
     
     <Grid>
         <Grid.ColumnDefinitions>
@@ -18,8 +30,14 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition />
-            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
+
+        <!--<Rectangle Grid.Row="1">
+            <Rectangle.Fill>
+                <VisualBrush Visual="{StaticResource appbar_acorn}" />
+            </Rectangle.Fill>
+        </Rectangle>-->
+
 
         <DockPanel Grid.Row="0">
             <Menu DockPanel.Dock="Top">
