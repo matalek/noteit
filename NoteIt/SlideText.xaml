@@ -14,7 +14,7 @@
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <Canvas Width="400" Height="200">
+    <Canvas Width="400" Height="220">
         
         <TextBox Width="400" Height="180"  TextWrapping="Wrap" AcceptsReturn="True" Name="textBox"></TextBox>
 
@@ -25,9 +25,7 @@
                 </Rectangle.Fill>
             </Rectangle>
         </Button>
-        <Button Margin="0 180" Width="400" Height="20" Name="addSlideButton">Add slide</Button>
+        <Button Margin="0 188" Width="400" Height="20" Name="addSlideButton">Add slide</Button>
         
     </Canvas>
-
-
 </UserControl>

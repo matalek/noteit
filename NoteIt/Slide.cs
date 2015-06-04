@@ -44,7 +44,7 @@ namespace NoteIt
             ColumnDefinition gridCol2 = new ColumnDefinition();
             grid.ColumnDefinitions.Add(gridCol1);
             grid.ColumnDefinitions.Add(gridCol2);
-            grid.Height = 200;
+            grid.Height = 220;
 
             // adding empty slide
             slideText = new SlideText(nr, note);

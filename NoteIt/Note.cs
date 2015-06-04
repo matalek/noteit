@@ -58,7 +58,7 @@ namespace NoteIt
             ColumnDefinition gridCol2 = new ColumnDefinition();
             grid.ColumnDefinitions.Add(gridCol1);
             grid.ColumnDefinitions.Add(gridCol2);
-            grid.Height = 20;
+            grid.Height = 40;
 
             var addSlideButton = new Button();
             addSlideButton.Height = 20;
