@@ -24,7 +24,7 @@ namespace NoteIt
             doc.Open();
 
             // printing title
-            Font titleFont = FontFactory.GetFont("Arial", 30, Font.BOLD);
+            Font titleFont = FontFactory.GetFont(FontFactory.HELVETICA, BaseFont.CP1250, 30, Font.BOLD);
             var title = new iTextSharp.text.Paragraph(note.Title, titleFont);
             title.Alignment = Element.ALIGN_CENTER;
             title.SpacingAfter = 20;
@@ -66,7 +66,8 @@ namespace NoteIt
 
             cell.BorderWidth = 0;
 
-            var paragraph = new iTextSharp.text.Paragraph(slide.Text);
+            Font font = FontFactory.GetFont(FontFactory.HELVETICA, BaseFont.CP1250, 10);
+            var paragraph = new iTextSharp.text.Paragraph(slide.Text, font);
             paragraph.SpacingAfter = 30;
             paragraph.Alignment = Element.ALIGN_MIDDLE;
             cell.AddElement(paragraph);
