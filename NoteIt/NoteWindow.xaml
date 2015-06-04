@@ -6,6 +6,7 @@
       xmlns:mpp="clr-namespace:MoonPdfLib;assembly=MoonPdfLib"
       xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
       xmlns:local="clr-namespace:NoteIt"
+      xmlns:commands="clr-namespace:NoteIt.Commands"
       mc:Ignorable="d" 
       d:DesignHeight="900" d:DesignWidth="900"
 	Title="NoteIt"
@@ -21,8 +22,26 @@
         </ResourceDictionary>
     </Window.Resources>
 
-    
-    
+    <Window.CommandBindings>
+        <CommandBinding Command="New" Executed="NewNote_Click" />
+        <CommandBinding Command="Open" Executed="OpenNote_Click" />
+        <CommandBinding Command="Save" Executed="SaveNote_Click" />
+        <CommandBinding Command="SaveAs" Executed="SaveNoteAs_Click" />
+        <CommandBinding Command="{x:Static commands:ApplicationCommands.ExitCmd}" Executed="Exit_Click" />
+        <CommandBinding Command="{x:Static commands:ApplicationCommands.ImportCmd}" Executed="ImportPdf_Click" />
+        <CommandBinding Command="{x:Static commands:ApplicationCommands.ExportCmd}" Executed="ExportPdf_Click" />
+        
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Key="N" Modifiers="Control" Command="New"/>
+        <KeyBinding Key="O" Modifiers="Control" Command="Open"/>
+        <KeyBinding Key="S" Modifiers="Control" Command="Save"/>
+        <KeyBinding Key="S" Modifiers="Control+Shift" Command="SaveAs"/>
+        <KeyBinding Key="Q" Modifiers="Control" Command="{x:Static commands:ApplicationCommands.ExitCmd}"/>
+        <KeyBinding Key="I" Modifiers="Control" Command="{x:Static commands:ApplicationCommands.ImportCmd}"/>
+        <KeyBinding Key="E" Modifiers="Control" Command="{x:Static commands:ApplicationCommands.ExportCmd}"/>
+    </Window.InputBindings>
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -35,7 +54,7 @@
         <DockPanel Grid.Row="0">
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="_File">
-                    <MenuItem Header="_New note" Click="NewNote_Click">
+                    <MenuItem Header="_New note" Click="NewNote_Click" InputGestureText="Ctrl+N">
                         <MenuItem.Icon>
                             <Rectangle Width="14" Height="15">
                                 <Rectangle.Fill>
@@ -44,7 +63,7 @@
                             </Rectangle>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="_Open note" Click="OpenNote_Click">
+                    <MenuItem Header="_Open note" Click="OpenNote_Click" InputGestureText="Ctrl+O">
                         <MenuItem.Icon>
                             <Rectangle Width="14" Height="10">
                                 <Rectangle.Fill>
@@ -53,7 +72,7 @@
                             </Rectangle>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="_Save note" Click="SaveNote_Click">
+                    <MenuItem Header="_Save note" Click="SaveNote_Click" InputGestureText="Ctrl+S">
                         <MenuItem.Icon>
                             <Rectangle Width="14" Height="14">
                                 <Rectangle.Fill>
@@ -62,9 +81,9 @@
                             </Rectangle>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="_Save note as" Click="SaveNoteAs_Click"/>
+                    <MenuItem Header="Save note _as" Click="SaveNoteAs_Click"/>
                     <Separator />
-                    <MenuItem Header="_Exit" Click="Exit_Click">
+                    <MenuItem Header="E_xit" Click="Exit_Click" InputGestureText="Ctrl+Q">
                         <MenuItem.Icon>
                             <Rectangle Width="14" Height="14">
                                 <Rectangle.Fill>
@@ -75,7 +94,7 @@
                     </MenuItem>
                 </MenuItem>
                 <MenuItem Header="_Import">
-                    <MenuItem Header="_Import PDF slides" Click="ImportPdf_Click">
+                    <MenuItem Header="_Import PDF slides" Click="ImportPdf_Click" InputGestureText="Ctrl+I">
                         <MenuItem.Icon>
                             <Rectangle Width="14" Height="14">
                                 <Rectangle.Fill>
@@ -86,7 +105,7 @@
                     </MenuItem>
                 </MenuItem>
                 <MenuItem Header="_Export">
-                    <MenuItem Header="_Export to PDF" Click="ExportPdf_Click">
+                    <MenuItem Header="_Export to PDF" Click="ExportPdf_Click" InputGestureText="Ctrl+E">
                         <MenuItem.Icon>
                             <Rectangle Width="14" Height="14">
                                 <Rectangle.Fill>

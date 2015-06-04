@@ -142,6 +142,7 @@
     <Compile Include="AboutWindow.xaml.cs">
       <DependentUpon>AboutWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ApplicationCommands.cs" />
     <Compile Include="BitmapHelper.cs" />
     <Compile Include="HorizontalPrintStrategy.cs" />
     <Compile Include="PrintStrategy.cs" />
