@@ -27,7 +27,7 @@ namespace NoteIt
 
         protected abstract OrientationType Orientation { get; }
 
-        protected virtual int[] Margins { get { return new int[] { 10, 10, 50, 10 }; } }
+        protected virtual int[] Margins { get { return new int[] { 10, 10, 70, 10 }; } }
 
         // creating header with title and page, from iTextSharp examples
         // source: http://sourceforge.net/p/itextsharp/code/HEAD/tree/book/iTextExamplesWeb/iTextExamplesWeb/iTextInAction2Ed/Chapter05/MovieCountries1.cs#l102
