@@ -163,8 +163,6 @@ namespace NoteIt
             }
         }
 
-
-
         public void AddPdf(FileSource fs)
         {
             pdfPresent = true;
@@ -207,6 +205,7 @@ namespace NoteIt
                     stillDeleting = false;
             }
 
+            isSaved = false;
         }
 
         public bool FileAssigned()
