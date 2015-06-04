@@ -52,5 +52,24 @@ namespace NoteIt
             }
 
         }
+
+        private void verticalRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            if (previewImageVertical != null)
+                previewImageVertical.Visibility = System.Windows.Visibility.Visible;
+            if (previewImageHorizontal != null)
+                previewImageHorizontal.Visibility = System.Windows.Visibility.Hidden;
+
+            //previewImage.Source = new BitmapImage(new Uri("vertical.png", UriKind.Relative));
+        }
+
+        private void horizontalRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            if (previewImageHorizontal != null)
+                previewImageHorizontal.Visibility = System.Windows.Visibility.Visible;
+            if (previewImageVertical != null)
+                previewImageVertical.Visibility = System.Windows.Visibility.Hidden;
+            //previewImage.Source = new BitmapImage(new Uri("horizontal.png", UriKind.Relative));
+        }
     }
 }
