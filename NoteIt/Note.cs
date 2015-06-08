@@ -91,6 +91,7 @@ namespace NoteIt
             stream.Close();
 
             titleBox.Text = savableNote.Title;
+            noteWindow.Title = System.IO.Path.GetFileNameWithoutExtension(fileName) + " - NoteIt";
 
             foreach (SavableSlide slide in savableNote.SlidesList)
                 AddSlideOnEnd(slide);

@@ -129,6 +129,7 @@ namespace NoteIt
             if (!shallContinue)
                 return;
 
+            Title = "NoteIt";
             slidesPanel.Children.Clear();
             note = new Note(slidesPanel, this);
             note.AddSlideOnEnd();
@@ -147,7 +148,10 @@ namespace NoteIt
             SaveFileDialog dialog = new SaveFileDialog();
             dialog.Filter = "NoteIt Files (.note)|*.note";
             if (dialog.ShowDialog() == true)
+            {
                 note.SaveAs(dialog.FileName);
+                Title = System.IO.Path.GetFileNameWithoutExtension(dialog.FileName) + " - NoteIt";
+            }
         }
         
 
