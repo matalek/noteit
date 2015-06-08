@@ -18,7 +18,6 @@ namespace NoteIt
 {
     class VerticalPrintStrategy : PrintStrategy
     {
-
         protected override PrintStrategy.OrientationType Orientation { get { return OrientationType.Vertical; } }
 
         public override void Print(Note note, FileStream fs, bool withSlideNumbers)
@@ -89,10 +88,5 @@ namespace NoteIt
             cell.VerticalAlignment = Element.ALIGN_MIDDLE;
             table.AddCell(cell);   
         }
-
-        
-
-
-
     }
 }

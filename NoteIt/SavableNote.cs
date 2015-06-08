@@ -12,25 +12,13 @@ namespace NoteIt
     {
         private List<SavableSlide> slidesList = new List<SavableSlide>();
 
-        private String title;
+        public String Title { get; set;  }
 
         public bool IsPdfPresent { get; set; }
 
         public void AddSlide(SavableSlide slide)
         {
             slidesList.Add(slide);
-        }
-
-        public String Title
-        {
-            get
-            {
-                return title;
-            }
-            set
-            {
-                title = value;
-            }
         }
 
         public List<SavableSlide> SlidesList

@@ -38,7 +38,6 @@ namespace NoteIt
             {
                 return textBox.Text;
             }
-
             set
             {
                 textBox.Text = value;

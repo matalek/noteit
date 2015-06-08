@@ -38,6 +38,30 @@ namespace NoteIt
 
         private NoteWindow noteWindow;
 
+        public bool IsSaved
+        {
+            get
+            {
+                return isSaved;
+            }
+        }
+
+        public string Title
+        {
+            get
+            {
+                return titleBox.Text;
+            }
+        }
+
+        public List<Slide> SlidesList
+        {
+            get
+            {
+                return slidesList;
+            }
+        }
+
         public bool IsPdfPresent 
         {
             get
@@ -139,7 +163,6 @@ namespace NoteIt
             // for not empty slide, ask user before deleting it
             if (slidesList[nr].Text != "")
             {
-
                 MessageDialogResult result = await noteWindow.ShowMessageAsync(
                     "This note is not empty!", "Do you want to delete a note for this slide?",
                     MessageDialogStyle.AffirmativeAndNegative);
@@ -148,13 +171,11 @@ namespace NoteIt
                     return;
             }
 
-
             // copy slide's content to previoues slide
             for (int i = nr; i < slidesList.Count - 1; i++)
             {
                 Debug.WriteLine("przepisuję " + slidesList[i + 1].SlideText + " do " + slidesList[i].SlideText);
-                slidesList[i].SlideText = slidesList[i + 1].SlideText;
-                
+                slidesList[i].SlideText = slidesList[i + 1].SlideText;  
             }
 
             Slide last = slidesList.Last();
@@ -249,30 +270,6 @@ namespace NoteIt
         public void MarkAsChanged()
         {
             isSaved = false;
-        }
-
-        public bool IsSaved
-        {
-            get
-            {
-                return isSaved;
-            }
-        }
-
-        public string Title
-        {
-            get
-            {
-                return titleBox.Text;
-            }
-        }
-
-        public List<Slide> SlidesList
-        {
-            get
-            {
-                return slidesList;
-            }
         }
     }
 }

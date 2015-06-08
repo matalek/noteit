@@ -34,7 +34,6 @@ namespace NoteIt
     /// </summary>
     public partial class NoteWindow : MetroWindow
     {
-
         private FileSource fs;
 
         private Note note;
@@ -135,6 +134,21 @@ namespace NoteIt
             note.AddSlideOnEnd();
         }
 
+        private async void OpenNote_Click(object sender, RoutedEventArgs e)
+        {
+            bool shallContinue = await ContinueIfUnsaved();
+            if (!shallContinue)
+                return;
+
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "NoteIt Files (.note)|*.note";
+            if (dialog.ShowDialog() == true)
+            {
+                slidesPanel.Children.Clear();
+                note = new Note(slidesPanel, dialog.FileName, this);
+            }
+        }
+
         private void SaveNote_Click(object sender, RoutedEventArgs e)
         {
             if (note.FileAssigned())
@@ -153,22 +167,5 @@ namespace NoteIt
                 Title = System.IO.Path.GetFileNameWithoutExtension(dialog.FileName) + " - NoteIt";
             }
         }
-        
-
-        private async void OpenNote_Click(object sender, RoutedEventArgs e)
-        {
-            bool shallContinue = await ContinueIfUnsaved();
-            if (!shallContinue)
-                return;
-
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "NoteIt Files (.note)|*.note";
-            if (dialog.ShowDialog() == true)
-            {
-                slidesPanel.Children.Clear();
-                note = new Note(slidesPanel, dialog.FileName, this);
-            }
-        }
-
     }
 }
