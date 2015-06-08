@@ -55,8 +55,11 @@ namespace NoteIt
         public Slide(int nr, Note note, SavableSlide savableSlide) : this(nr, note)
         {
             Text = savableSlide.Text;
-            image = savableSlide.Image;
-            AddPdfImageControl();
+            if (savableSlide.Image != null)
+            {
+                image = savableSlide.Image;
+                AddPdfImageControl();
+            }
         }
 
         public void Remove()
