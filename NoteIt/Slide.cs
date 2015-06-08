@@ -122,6 +122,9 @@ namespace NoteIt
 
         private void AddPdfImageControl()
         {
+            if (imageControl != null)
+                grid.Children.Remove(imageControl);
+
             imageControl = new System.Windows.Controls.Image();
 
             MemoryStream Ms = new MemoryStream();
