@@ -30,7 +30,7 @@ namespace NoteIt
 
         private TextBox titleBox;
 
-        private bool pdfPresent = false;
+        private bool isPdfPresent = false;
 
         private string fileName; // where the note is saved
 
@@ -38,11 +38,11 @@ namespace NoteIt
 
         private NoteWindow noteWindow;
 
-        public bool IsPdfPresent
+        public bool IsPdfPresent 
         {
             get
             {
-                return pdfPresent;
+                return isPdfPresent;
             }
         }
 
@@ -95,6 +95,7 @@ namespace NoteIt
             foreach (SavableSlide slide in savableNote.SlidesList)
                 AddSlideOnEnd(slide);
 
+            isPdfPresent = savableNote.IsPdfPresent;
             isSaved = true;
         }
 
@@ -170,7 +171,7 @@ namespace NoteIt
 
         public void AddPdf(FileSource fs)
         {
-            pdfPresent = true;
+            isPdfPresent = true;
 
             var mainPanel = new MoonPdfPanel();
             mainPanel.InitializeComponent();
@@ -220,8 +221,13 @@ namespace NoteIt
 
         public void Save() 
         {
+            // do not save, if we have nothing to save
+            if (isSaved) 
+                return;
+
             SavableNote savableNote = new SavableNote();
             savableNote.Title = titleBox.Text;
+            savableNote.IsPdfPresent = isPdfPresent;
             foreach (Slide slide in slidesList)
                 savableNote.AddSlide(new SavableSlide(slide));
 

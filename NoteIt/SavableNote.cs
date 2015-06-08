@@ -14,6 +14,8 @@ namespace NoteIt
 
         private String title;
 
+        public bool IsPdfPresent { get; set; }
+
         public void AddSlide(SavableSlide slide)
         {
             slidesList.Add(slide);
